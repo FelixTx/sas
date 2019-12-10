@@ -1,3 +1,110 @@
+var markers = {
+	"type": "FeatureCollection",
+};
+
+(function($) {
+
+	var data;
+	var events = [];
+
+	$.ajax({
+		type: "GET",  
+		url: "https://felixtx.github.io/sas/data.csv",
+		dataType: "text",       
+		success: function(response)  
+		{
+			data = CSV2JSON(response);
+
+			data.forEach( m => {
+				events.push({
+					"type": "Feature",
+					"geometry" : {"type" : "Point", "coordinates":[parseFloat(m.long), parseFloat(m.lat)]},
+					"properties": m
+				});
+				delete(m.lat);
+				delete(m.long);
+			});
+
+			markers.features = events;
+
+			generateHtmlTable(data);
+			loadmap(markers);
+		}
+	});
+
+
+
+	function CSV2JSON(csv) {
+		var lines = csv.split("\n");
+		var titles = lines[0].split(";");
+		var data = new Array(lines.length - 1);
+
+		for (var i = 1; i < lines.length; i++) {
+			data[i - 1] = {};
+			lines[i] = lines[i].split(";");
+			for (var j = 0; j < titles.length; j++) {
+				data[i - 1][titles[j]] = lines[i][j];
+			}
+		}
+
+		return data
+	}
+
+	$(document).ready(function(){
+		$(".event-list-filter").change( function() {
+			$('tr').show();
+			var city = $("#city-filter").val().toLowerCase();
+			var type = $("#type-filter").val().toLowerCase();
+			$("#event-list tr").filter(function() {
+				($(this).toggle($(this).text().toLowerCase().indexOf(city) > -1))
+			&&	($(this).toggle($(this).text().toLowerCase().indexOf(type) > -1))
+			});
+		});
+	});
+
+})(jQuery);
+
+
+function generateHtmlTable(data) {
+	var html_list = '';
+	var cities = new Set([]);
+	var types = new Set([]);
+	if(typeof(data[0]) === 'undefined') {
+		return null;
+	} else {
+		$.each(data, function( index, row ) {
+		  //bind header
+		  html_list += '<tr>';
+		  $.each(row, function( index, colData ) {
+		  	html_list += '<td>';
+		  	html_list += colData;
+		  	html_list += '</td>';
+		  	if (index == 'type') {
+		  		types.add(colData);
+		  	}
+
+		  	if (index == 'ville') {
+		  		villes.add(colData);
+		  	}
+		  	if (index == 'type') {
+		  		types.add(colData);
+		  	}
+		  });
+		  html_list += '</tr>';
+		});
+		$('#event-list').find('tbody').append(html_list);
+	}
+			types.forEach(t => {		
+			$('#type-filter').append(`<option value="${t}">${t}</option>`);
+		});
+			cities.forEach(c => {
+			$('#city-filter').append(`<option value="${c}">${c}</option>`);
+		});
+}	
+
+
+
+
 
 mapboxgl.accessToken = "pk.eyJ1IjoiZmVsaXh0IiwiYSI6ImNrM29reGh6dTBtYWYzcHFlYTI2dzRxbXUifQ.dprOgOf1zOZFS9-4HYNxcA";
 
@@ -14,42 +121,46 @@ map.addControl(
 		accessToken: mapboxgl.accessToken,
 		language: 'fr-FR',
 		marker: false,
+		placeholder: '     Où habitez-vous ?',
 		mapboxgl: mapboxgl,
 	}),
 	'top-left'
-);
+	);
 
 map.addControl(new mapboxgl.GeolocateControl({
 	positionOptions: {
 		enableHighAccuracy: true
-		},
-		trackUserLocation: true
-	}),
-	'bottom-left'
+	},
+	trackUserLocation: true
+}),
+'bottom-left'
 );
 
 map.addControl(new mapboxgl.FullscreenControl());
 
-map.on("load", function () {
-	/* Image: An image is loaded and added to the map. */
-	map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
-		if (error) throw error;
-		map.addImage("custom-marker", image);
-		/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
-		map.addLayer({
-			id: "events",
-			type: "symbol",
-			/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
-			source: {
-				type: "geojson",
-				data: markers
-			},
-			layout: {
-				"icon-image": "custom-marker",
-				"icon-allow-overlap": true
-			}
+function loadmap(markers) {
+
+	map.on("load", function () {
+
+		/* Image: An image is loaded and added to the map. */
+		map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("custom-marker", image);
+			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
+			map.addLayer({
+				id: "events",
+				type: "symbol",
+				/* Source: A data source specifies the geographic coordinate where the image marker gets placed. */
+				source: {
+					type: "geojson",
+					data: markers
+				},
+				layout: {
+					"icon-image": "custom-marker",
+					"icon-allow-overlap": true
+				}
+			});
 		});
-	});
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
 	// location of the feature, with description HTML from its properties.
@@ -73,7 +184,7 @@ map.on("load", function () {
 	.setLngLat(coordinates)
 	.setHTML(popup_content)
 	.addTo(map);
-	});
+});
 
 	// Change the cursor to a pointer when the mouse is over the places layer.
 	map.on('mouseenter', 'events', function () {
@@ -84,4 +195,5 @@ map.on("load", function () {
 	map.on('mouseleave', 'events', function () {
 		map.getCanvas().style.cursor = '';
 	});
-});
+})
+}
