@@ -56,8 +56,8 @@ var markers = {
 			var city = $("#city-filter").val().toLowerCase();
 			var type = $("#type-filter").val().toLowerCase();
 			$("#event-list tr").filter(function() {
-				($(this).toggle($(this).text().toLowerCase().indexOf(city) > -1))
-			&&	($(this).toggle($(this).text().toLowerCase().indexOf(type) > -1))
+				$(this).toggle($(this).text().toLowerCase().indexOf(city) > -1
+					&& $(this).text().toLowerCase().indexOf(type) > -1)
 			});
 		});
 	});
@@ -84,7 +84,7 @@ function generateHtmlTable(data) {
 		  	}
 
 		  	if (index == 'ville') {
-		  		villes.add(colData);
+		  		cities.add(colData);
 		  	}
 		  	if (index == 'type') {
 		  		types.add(colData);
@@ -94,12 +94,12 @@ function generateHtmlTable(data) {
 		});
 		$('#event-list').find('tbody').append(html_list);
 	}
-			types.forEach(t => {		
-			$('#type-filter').append(`<option value="${t}">${t}</option>`);
-		});
-			cities.forEach(c => {
-			$('#city-filter').append(`<option value="${c}">${c}</option>`);
-		});
+	types.forEach(t => {		
+		$('#type-filter').append(`<option value="${t}">${t}</option>`);
+	});
+	cities.forEach(c => {
+		$('#city-filter').append(`<option value="${c}">${c}</option>`);
+	});
 }	
 
 
