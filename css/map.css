@@ -35,7 +35,7 @@ h1 {
 
 #map {
 	height: 600px;
-	min-width: 90%;
+	min-width: 80%;
 };
 
 .mapboxgl-popup {
@@ -67,7 +67,7 @@ line-height: 1em;
 }
 
 th select {
-	width: 60px;
+	width: auto;
 }
 th select:hover {
 	cursor: pointer; 
