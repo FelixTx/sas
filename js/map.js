@@ -75,7 +75,7 @@ function generateHtmlTable(data) {
 		$.each(data, function( index, row ) {
 
 		  	html_list += `<tr>
-		  	<td><div><h3>${row.title}</h3><p>${row.title}</p></div>
+		  	<td><div><h3>${row.title}</h3><p>${row.description}</p></div>
 		  	</td>
 		  	<td>${row.date}</td>
 		  	<td>${row.type}</td>
