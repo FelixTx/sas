@@ -75,11 +75,11 @@ function generateHtmlTable(data) {
 		$.each(data, function( index, row ) {
 
 		  	html_list += `<tr>
-		  	<td><div><h3>${row.title}</h3><p>${row.description}</p></div>
+		  	<td class="description"><div><h3>${row.title}</h3><p>${row.description}</p></div>
 		  	</td>
-		  	<td>${row.date}</td>
-		  	<td>${row.type}</td>
-		  	<td>${row.city}</td>
+		  	<td class="date">${row.date}</td>
+		  	<td class="type">${row.type}</td>
+		  	<td class="city">${row.city}</td>
 		  	</tr>'`;
 
 
@@ -95,7 +95,6 @@ function generateHtmlTable(data) {
 		$('#city-filter').append(`<option value="${c}">${c}</option>`);
 	});
 }	
-
 
 
 

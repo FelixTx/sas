@@ -12,3 +12,27 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   border-radius: 50%;
   cursor: pointer;
 }
+
+th select {
+	min-width: 110px;
+}
+
+tr p {
+	max-height: 300px;
+	overflow: hidden;
+}
+
+.description {
+		min-width: 75%;	
+        max-height:300px;
+        overflow: hidden;
+    }
+
+@media screen and (max-width: 980px) {
+	#event-list td, th {
+		display: block;
+	}
+
+	#event-list .date {
+		display: none;
+	}
