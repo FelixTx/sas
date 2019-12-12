@@ -1,4 +1,43 @@
-#map {height: 600px;};
+header a{
+	text-decoration: none;
+	color: black;
+}
+
+#nav {
+	background: white;
+	width:100%;
+}
+#nav div {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.text-gauche {
+	line-height: 1em;
+}
+
+.logo-milieu {
+	text-align: center;
+}
+.logo-milieu img{
+	width: 50px;
+}
+
+
+#banner img {
+	width: 50%;
+}
+
+h1 {
+	font-size: 3em;
+	color: #ce3728;
+}
+
+#map {
+	height: 600px;
+	min-width: 90%;
+};
+
 .mapboxgl-popup {
 max-width: 400px;
 font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -13,9 +52,27 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
   cursor: pointer;
 }
 
-th select {
-	min-width: 110px;
+th select, th p{
+	background-color: #ce3728;
+	  font-variant: small-caps;
+	  font-weight: bold;
+	  color: white;
+	  	  display: inline;
+	  padding: 3px 3px;
+text-align: center;
+height: 2em;
+vertical-align: middle;
+font-size: 1em;
+line-height: 1em;
 }
+
+th select {
+	width: 60px;
+}
+th select:hover {
+	cursor: pointer; 
+}
+
 
 tr p {
 	max-height: 300px;
@@ -27,12 +84,30 @@ tr p {
         max-height:300px;
         overflow: hidden;
     }
+.description h3 {
+	color: #ce3728;
+}
+
+
+.press a{
+	background-color: white;
+    -webkit-border-radius: 180px / 60px;
+    -moz-border-radius:    180px / 60px; 
+    border-radius:         180px / 60px; 
+    padding: 20px;
+    color: #ce3728;
+}
+
+
+
+
 
 @media screen and (max-width: 980px) {
 	#event-list td, th {
-		display: block;
+		display: inline;
 	}
 
 	#event-list .date {
 		display: none;
 	}
+}

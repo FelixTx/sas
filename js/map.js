@@ -73,7 +73,7 @@ function generateHtmlTable(data) {
 		return null;
 	} else {
 		$.each(data, function( index, row ) {
-
+			console.log(row);
 		  	html_list += `<tr>
 		  	<td class="description"><div><h3>${row.title}</h3><p>${row.description}</p></div>
 		  	</td>

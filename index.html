@@ -5,7 +5,7 @@
 -->
 <html>
 	<head>
-		<title>Sortons l'agriculture du salon !</title>
+		<title>Sortons l'agriculture du salon ! </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
@@ -20,50 +20,53 @@
 
 		<!-- Header -->
 			<header id="header" class="alt">
-				<h1><strong><a href="index.html">Sortons</a></strong> l'agriculture du salon !</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Carte</a></li>
-						<li><a href="programmation.html">La programmation</a></li>
-						<li><a href="nous.html">Qui sommes nous ?</a></li>
+				<nav id="nav"><div class="text-gauche 5u"><ul><li><a href="index.html">Le festival des acteurs de la transition énergétique <br> du 22 février au 1er mars 2020</a></li></ul>
+					</div><div class="logo-milieu 2u"><div><img src="images/logo.png"></div>
+					</div><div class="nav-droite 5u">
+						<ul>
+						<li><a href="programmation.html">programmation</a></li>
 						<li><a href="reflexions.html">Réflexions</a></li>
+						<li><a href="nous.html">Qui sommes nous ?</a></li>
 					</ul>
-				</nav>
+				</div></nav>
 			</header>
 
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
 		<!-- Banner -->
 			<section id="banner">
-				<h2>Sortons l’Agriculture du Salon, édition #4 : Les citoyens passent à table !</h2>
+				<img src="images/logo.png">
 				<p></p>
 			</section>
 
 			<!-- One -->
 				<section id="one" class="wrapper style1">
-					<div id='home-intro' class="container 75%">
+					<div id='home-intro' class="container 100%">
+					<h1>programmation</h1>
 					<p>Sortons l’Agriculture du Salon, du 22 février au 1er mars 2020 - Le festival des acteurs de la transition alimentaire, organisé par : 
 					Alimentation Générale, KissKissBankBank et la Ruche qui dit Oui ! 
 
 					Partout en France, venez découvrir les initiatives citoyennes qui font l’agriculture et l’alimentation de demain : visites, dégustations, projections de films, ateliers… demandez le programme ! 
-					</p></div>
+					</p>
+					<h2> voir les événements autour de vous sur la carte</h2>
+				</div>
 					<div id='map' class="container 100%"></div>
 				</section>
 							<!-- Two -->
-				<section id="two" class="wrapper style2">
+				<section id="two" class="wrapper style1">
 					<div id='event-list' class="container 100%">
-						
-						<table  class="table table-condensed table-hover table-striped"> 
+						<h2> voir la liste de tous les événements</h2>
+						<table  class="table table-condensed table-hover"> 
 							<thead>
 								<tr>
-									<th>Evénement</th>
-									<th class="date">Date</th>
+									<th><p>Nom</p></th>
+									<th class="date"><p>Date</p></th>
 									<th><select id="type-filter" class='event-list-filter'>
-						    			<option value="" selected="selected">Tout type</option>
+						    			<option value="" selected="selected">Type &#9662;</option>
 										</select>
 									</th>
 										<th><select id="city-filter" class='event-list-filter'>
-						    			<option value="" selected="selected">Toute ville</option>
+						    			<option value="" selected="selected">Ville &#9662;</option>
 										</select>
 									</th>
 								</tr>
