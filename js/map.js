@@ -73,24 +73,18 @@ function generateHtmlTable(data) {
 		return null;
 	} else {
 		$.each(data, function( index, row ) {
-		  //bind header
-		  html_list += '<tr>';
-		  $.each(row, function( index, colData ) {
-		  	html_list += '<td>';
-		  	html_list += colData;
-		  	html_list += '</td>';
-		  	if (index == 'type') {
-		  		types.add(colData);
-		  	}
 
-		  	if (index == 'ville') {
-		  		cities.add(colData);
-		  	}
-		  	if (index == 'type') {
-		  		types.add(colData);
-		  	}
-		  });
-		  html_list += '</tr>';
+		  	html_list += `<tr>
+		  	<td><div><h3>${row.title}</h3><p>${row.title}</p></div>
+		  	</td>
+		  	<td>${row.date}</td>
+		  	<td>${row.type}</td>
+		  	<td>${row.city}</td>
+		  	</tr>'`;
+
+
+	  		cities.add(row.city);
+	  		types.add(row.type);
 		});
 		$('#event-list').find('tbody').append(html_list);
 	}
