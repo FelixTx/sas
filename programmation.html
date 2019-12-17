@@ -1,66 +1,100 @@
 <!DOCTYPE HTML>
 <!--
-	Spatial by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Sortons l'agriculture du salon
+	based on Spatial by TEMPLATED
 -->
 <html>
 	<head>
-		<title>Generic - Spatial by TEMPLATED</title>
+		<title>Sortons l'agriculture du salon ! </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="css/main.css" />
-		<link rel="stylesheet" href="css/map.css">
+		<link rel="stylesheet" href="css/custom.css">
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+		<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js'></script>
+		<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css' type='text/css' />
+
 	</head>
 	<body>
 
 		<!-- Header -->
-			<header id="header">
-				<h1><strong><a href="index.html">Sortons</a></strong> l'agriculture du salon !</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Carte</a></li>
-						<li><a href="programmation.html">La programmation</a></li>
-						<li><a href="nous.html">Qui sommes nous ?</a></li>
+			<header id="header" class="alt">
+				<nav id="nav"><div class="text-gauche 5u"><ul><li>Le festival des acteurs de la transition énergétique <br> du 22 février au 1er mars 2020</li></ul>
+					</div><div class="logo-milieu 2u"><div><ul><li><a href="index.html"><img src="images/logo.png"></a></li></ul></div>
+					</div><div class="nav-droite 5u">
+						<ul>
+						<li><a href="programmation.html">Programmation</a></li>
 						<li><a href="reflexions.html">Réflexions</a></li>
+						<li><a href="nous.html">Qui sommes nous ?</a></li>
 					</ul>
-				</nav>
+				</div></nav>
 			</header>
 
 			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
-		<!-- Main -->
-			<section id="main" class="wrapper">
-				<div class="container">
+			<!-- One -->
+				<section id="one" class="wrapper style1">
+					<div id='home-intro' class="container 100%">
+					<h1>programmation</h1>
+					<p>Sortons l’Agriculture du Salon, du 22 février au 1er mars 2020 - Le festival des acteurs de la transition alimentaire, organisé par : 
+					Alimentation Générale, KissKissBankBank et la Ruche qui dit Oui ! 
 
-					<header class="major special">
-						<h2>La Programmation</h2>
-						<p>retrouvez toute la programmation</p>
-					</header>
-
-					<p>Une simple rencontre citoyenne avec débat dans un café, la projection d’un film, la visite de fermes, de jardins partagés, la présentation de start-up, des ateliers cuisines avec vos grand-mères, une fête avec vos voisins agriculteurs, une rencontre dans votre salon … etc. tout sera prétexte à Sortir l’agriculture du Salon ! 
-					</p><p>
-					Retrouvez également nos 4 grands événements organisés à Paris, Marseille, Lyon et Rennes.
-					</p><p>Description de la programmation dans chaque ville. 
-					Voir quand on aura les infos plus précises. </p>
+					Partout en France, venez découvrir les initiatives citoyennes qui font l’agriculture et l’alimentation de demain : visites, dégustations, projections de films, ateliers… demandez le programme ! 
+					</p>
+					<h2> voir les événements autour de vous sur la carte</h2>
 				</div>
-			</section>
-			
+					<div id='map' class="container 100%"></div>
+				</section>
+							<!-- Two -->
+				<section id="two" class="wrapper style1">
+					<div id='event-list' class="container 100%">
+						<h2> voir la liste de tous les événements</h2>
+						<table  class="table table-condensed table-hover"> 
+							<thead>
+								<tr>
+									<th><p>Nom</p></th>
+									<th class="date"><p>Date</p></th>
+									<th><select id="type-filter" class='event-list-filter'>
+						    			<option value="" selected="selected">Type &#9662;</option>
+										</select>
+									</th>
+										<th><select id="city-filter" class='event-list-filter'>
+						    			<option value="" selected="selected">Ville &#9662;</option>
+										</select>
+									</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					
+				</div>
+				</section>
+
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-facebook"></a></li>
-						<li><a href="#" class="icon fa-twitter"></a></li>
-						<li><a href="#" class="icon fa-instagram"></a></li>
-					</ul>
-					<ul class="copyright">
-						<li><a href="#">Communiqué de presse</a></li>
-						<li><a href="#">Visuels</a></li>
-						<li><a href="#">Contact presse</a></li>
-						<li>&copy; LRQDO</li>
-					</ul>
+					<div class="first">
+					<div class="presse">
+						<a href="#">Kit Presse</a>
+					</div></div>
+					<div class="participant">
+						<a href="#"> Kit <br>Participant</a></div>
+					<div class="social">
+						<ul class="alt">
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram #SAS2020</a></li>
+							<li><a href="#">Contact</a></li>
+				</ul></div>
+									<div class="acteurs">
+						<ul class="alt">
+							<li><a href="#"><img src="images/logo.png" width="50px"></a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram #SAS2020</a></li>
+				</ul></div>
 				</div>
+				<div class="legal"><a>Mentions légales</a></div>
 			</footer>
 
 		<!-- Scripts -->
@@ -68,6 +102,7 @@
 			<script src="js/skel.min.js"></script>
 			<script src="js/util.js"></script>
 			<script src="js/main.js"></script>
-
+		    <script src="js/map.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
 	</body>
 </html>

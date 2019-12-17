@@ -73,15 +73,19 @@ function generateHtmlTable(data) {
 		return null;
 	} else {
 		$.each(data, function( index, row ) {
-			console.log(row);
+			if (row.title == "") {
+				return; // skip empty row
+			}
+
 		  	html_list += `<tr>
-		  	<td class="description"><div><h3>${row.title}</h3><p>${row.description}</p></div>
-		  	</td>
+		  	<td class="description"><div>
+		  	<h3>${row.title}</h3>
+		  	<p>${row.description}</p>
+		  	</div></td>
 		  	<td class="date">${row.date}</td>
 		  	<td class="type">${row.type}</td>
 		  	<td class="city">${row.city}</td>
 		  	</tr>'`;
-
 
 	  		cities.add(row.city);
 	  		types.add(row.type);
