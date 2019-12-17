@@ -8,6 +8,11 @@ a {
 	background: white;
 	width:100%;
 }
+
+.landing #nav {
+	background-color: rgba(256,256,256,0.2);
+}
+
 #nav div {
 	display: inline-block;
 	vertical-align: middle;
@@ -36,12 +41,12 @@ padding: 5em;
 }
 
 .intro-r {
-	color: #ce3728;
+	color: #e74632;
 }
 
 h1 {
 	font-size: 3em;
-	color: #ce3728;
+	color: #e74632;
 }
 
 #map {
@@ -64,7 +69,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 th select, th p{
-	background-color: #ce3728;
+	background-color: #e74632;
 	  font-variant: small-caps;
 	  color: white;
 	  	  display: inline;
@@ -95,7 +100,7 @@ tr p {
         overflow: hidden;
     }
 .description h3 {
-	color: #ce3728;
+	color: #e74632;
 }
 
 #footer ul a, .legal a {
@@ -125,7 +130,7 @@ margin: 3em 5em 0 0;
 }
 
 .presse a, .participant a {	
-	color: #ce3728;	
+	color: #e74632;	
 	line-height: 1em;
 }
 
