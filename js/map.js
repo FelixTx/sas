@@ -143,6 +143,8 @@ function loadmap(markers) {
 		map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
 			if (error) throw error;
 			map.addImage("custom-marker", image);
+		});
+			
 			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
 			map.addLayer({
 				id: "events",
@@ -157,7 +159,6 @@ function loadmap(markers) {
 					"icon-allow-overlap": true
 				}
 			});
-		});
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
 	// location of the feature, with description HTML from its properties.
