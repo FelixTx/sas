@@ -13,6 +13,10 @@ a {
 	vertical-align: middle;
 }
 
+#header nav .nav-droite ul {
+float: right;
+}
+
 .text-gauche {
 	line-height: 1em;
 }
@@ -26,8 +30,9 @@ a {
 
 
 #banner img {
-min-width: 50%;
-max-width: 90%;
+max-width: 50em;
+background:white;
+padding: 5em;
 }
 
 .intro-r {
@@ -61,7 +66,6 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 th select, th p{
 	background-color: #ce3728;
 	  font-variant: small-caps;
-	  font-weight: bold;
 	  color: white;
 	  	  display: inline;
 	  padding: 3px 3px;
@@ -118,13 +122,15 @@ tr p {
 
 .social, .acteurs {
 margin: 3em 5em 0 0;
-	font-weight:bold;
 }
 
 .presse a, .participant a {	
 	color: #ce3728;	
 	line-height: 1em;
-	font-weight:bold;
+}
+
+.legal a{
+	font-weight: 300;
 }
 
 .participant {

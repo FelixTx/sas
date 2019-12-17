@@ -1,6 +1,5 @@
-@import url(font-awesome.min.css);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
-
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
 /*
 	Spatial by TEMPLATED
 	templated.co @templatedco
@@ -1593,12 +1592,16 @@
 	}
 
 	body, input, select, textarea {
-		font-family: "Raleway", Arial, Helvetica, sans-serif;
+		font-family: "Source Serif Pro", Arial, Helvetica, serif;
 		font-size: 13pt;
 		font-weight: 400;
 		line-height: 2em;
 	}
 
+	header, footer, h1, h2, h3, h4, h5, h6, li {
+		font-family: "Anton", Arial, Helvetica, sans-serif;
+	}
+	
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
@@ -1658,7 +1661,7 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #484848;
-		font-weight: 700;
+		font-weight: 500;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
@@ -2717,7 +2720,7 @@
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("images/overlay.png"), url("../images/banner.jpg");
+			background-image:   url("../images/banner.jpg");
 			background-position: center center;
 			background-size: cover;
 		}
@@ -2811,7 +2814,7 @@
 				#header nav ul li {
 					border-radius: 4px;
 					display: inline-block;
-					margin-left: 2.5em;
+					margin-left: 1em;
 					padding-left: 0;
 				}
 
@@ -3057,9 +3060,9 @@
 
 	#banner {
 		height: 100vh;
-		padding: 16em 0 13em 0;
+		padding: 6em 0 6em 0;
 		background-attachment: fixed;
-		background-image: url("images/overlay.png"), url("../images/banner.jpg");
+		background-image:   url("../images/banner.jpg");
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
