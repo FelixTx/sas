@@ -140,9 +140,11 @@ function loadmap(markers) {
 	map.on("load", function () {
 
 		/* Image: An image is loaded and added to the map. */
-		map.loadImage("https://i.imgur.com/MK4NUzI.png", function(error, image) {
+		map.loadImage("https://felixtx.github.io/sas/images/marker-red.png", function(error, image) {
 			if (error) throw error;
-			map.addImage("custom-marker", image);
+			map.addImage("marker-red", image);
+		});
+
 			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
 			map.addLayer({
 				id: "events",
@@ -153,11 +155,10 @@ function loadmap(markers) {
 					data: markers
 				},
 				layout: {
-					"icon-image": "custom-marker",
+					"icon-image": "{type}",
 					"icon-allow-overlap": true
 				}
 			});
-		});
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
 	// location of the feature, with description HTML from its properties.
