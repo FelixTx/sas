@@ -42,7 +42,7 @@
 		// Off-Canvas Navigation.
 
 			// Navigation Panel Toggle.
-				$('<a href="#navPanel" class="navPanelToggle"></a>')
+				$('<a href="#navPanel" class="navPanelToggle"><img src="images/sas-logo.svg" width="50px"></a>')
 					.appendTo($body);
 
 			// Navigation Panel.

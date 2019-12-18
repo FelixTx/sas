@@ -13,6 +13,10 @@ a {
 	background-color: rgba(256,256,256,0.2);
 }
 
+.landing .logo-milieu {
+	visibility: hidden;
+}
+
 #nav div {
 	display: inline-block;
 	vertical-align: middle;
@@ -29,13 +33,17 @@ float: right;
 .logo-milieu {
 	text-align: center;
 }
+.logo-milieu {
+	height: 56px;
+}
+
 .logo-milieu img{
-	width: 50px;
+	width: 100px;
 }
 
 
 #banner img {
-max-width: 50em;
+max-width: 80%;
 background:white;
 padding: 5em;
 }
@@ -125,8 +133,15 @@ tr p {
 	-moz-border-radius:    90px / 50px;
 }
 
+.footer-left {
+	width:45%;
+}
+.footer-right {
+	width:54%;
+}
 .social, .acteurs {
-margin: 3em 5em 0 0;
+	float: right;
+	margin: 3em 5em 0 0;
 }
 
 .presse a, .participant a {	
@@ -134,17 +149,21 @@ margin: 3em 5em 0 0;
 	line-height: 1em;
 }
 
-.legal a{
+.legal {
 	font-weight: 300;
 }
 
 .participant {
-	margin: 3em 6em 0 0;
+	margin: 3em 1em 0 0;
 	font-size: 2em;
 	padding: 0.5em;
 	color: #ce3728;
 	background:white;
 	transform: rotate(5deg)
+}
+
+#footer .acteurs img {
+	height: 30px;
 }
 
 @media screen and (max-width: 980px) {
@@ -155,4 +174,33 @@ margin: 3em 5em 0 0;
 	#event-list .date {
 		display: none;
 	}
+
+	#banner {
+		padding-top:10em;
+	}
+	#banner img {
+	max-width: 100%;
+}
+.footer-left, .footer-right {
+	width:auto;
+	margin-left:20%;
+}
+
+
+
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
+    content: <img src="images/sas-logo.svg">;
+}
+
+.navPanelToggle img {
+	background:white;
+padding: 0.5em;
+margin: 1em;
+width: 4em;
+border-radius: 5px;
+}
+
+#navPanel div {
+	width:80%;
+}
 }
