@@ -1,16 +1,11 @@
 a {
 	text-decoration: none;
-	color: #484848;
+	color: #324b4b;
 }
 
 #nav {
 	padding: 0 1em; 
-	background: white;
 	width:100%;
-}
-
-.landing #nav {
-	background-color: rgba(256,256,256,0.2);
 }
 
 .landing .logo-milieu {
