@@ -1598,7 +1598,7 @@
 		line-height: 2em;
 	}
 
-	header, footer, h1, h2, h3, h4, h5, h6, li {
+	header, footer, h1, h2, h3, h4, h5, h6, li, th, select {
 		font-family: "Anton", Arial, Helvetica, sans-serif;
 	}
 	
@@ -1659,8 +1659,7 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h3, h5, h6 {
-		color: #484848;
+	h1, h2, h3, h5, h6 {
 		font-weight: 500;
 		line-height: 1em;
 		margin: 1em 0 1em 0;
@@ -2661,7 +2660,6 @@
 		table th {
 			color: #484848;
 			font-size: 0.9em;
-			font-weight: 700;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
 		}
@@ -2745,7 +2743,7 @@
 		@media screen and (max-width: 980px) {
 
 			.wrapper {
-				padding: 4em 0 2em 0;
+				margin-top: 6em;
 			}
 
 		}
@@ -2898,7 +2896,7 @@
 	.navPanelToggle {
 		text-decoration: none;
 		text-decoration: none;
-		height: 100%;
+		height: 20%;
 		left: 0;
 		position: absolute;
 		top: 0;

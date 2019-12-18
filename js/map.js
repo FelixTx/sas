@@ -9,7 +9,7 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		url: "https://felixtx.github.io/sas/data.csv",
+		url: "https://felixtx.github.io/sas/events.csv?" + Math.random(),
 		dataType: "text",       
 		success: function(response)  
 		{
@@ -82,9 +82,9 @@ function generateHtmlTable(data) {
 		  	<h3>${row.title}</h3>
 		  	<p>${row.description}</p>
 		  	</div></td>
-		  	<td class="date">${row.date}</td>
 		  	<td class="type">${row.type}</td>
 		  	<td class="city">${row.city}</td>
+		  	<td class="date">${row.date}</td>
 		  	</tr>'`;
 
 	  		cities.add(row.city);

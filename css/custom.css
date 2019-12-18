@@ -68,7 +68,7 @@ h3 {
 
 #map {
 	height: 600px;
-	min-width: 80%;
+	min-width: 75%;
 };
 
 .mapboxgl-popup {
@@ -87,7 +87,7 @@ font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 th select, th p{
 	background-color: #e74632;
-	  font-variant: small-caps;
+	text-transform: uppercase;
 	  color: white;
 	  	  display: inline;
 	  padding: 3px 3px;
