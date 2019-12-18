@@ -139,11 +139,42 @@ function loadmap(markers) {
 
 	map.on("load", function () {
 
+		var category = "Atelier";
+
 		/* Image: An image is loaded and added to the map. */
-		map.loadImage("https://felixtx.github.io/sas/images/marker-red.png", function(error, image) {
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Atelier.png", function(error, image) {
 			if (error) throw error;
-			map.addImage("marker-red", image);
+			map.addImage("Atelier", image);
 		});
+
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Autre.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("Autre", image);
+		});
+
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Débat.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("Débat", image);
+		});
+
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Exposition.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("Exposition", image);
+		});
+		
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Projection.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("Projection", image);
+		});		
+		
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Rencontre.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("Rencontre", image);
+		});	
+
+		map.loadImage("https://felixtx.github.io/sas/images/marker-Repas.png", function(error, image) {
+			if (error) throw error;
+			map.addImage("Repas", image);
 
 			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
 			map.addLayer({
@@ -157,8 +188,10 @@ function loadmap(markers) {
 				layout: {
 					"icon-image": "{type}",
 					"icon-allow-overlap": true
-				}
+				},
+				"filter": ["==", "type", category]
 			});
+		});	
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
 	// location of the feature, with description HTML from its properties.
@@ -166,7 +199,10 @@ function loadmap(markers) {
 		var coordinates = e.features[0].geometry.coordinates.slice();
 		var evt_description = e.features[0].properties.description;
 		var evt_title = e.features[0].properties.title;
+		var evt_type = e.features[0].properties.type;
+		var evt_place = e.features[0].properties.location_name;
 		var evt_date = e.features[0].properties.date;
+		var evt_organizer = e.features[0].properties.organizer;
 
 
 	// Ensure that if the map is zoomed out such that multiple
@@ -176,8 +212,14 @@ function loadmap(markers) {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
 
-	popup_content = "<h4>" + evt_title + "</h4>" + evt_description + "<p><i>" + evt_date + "</i></p>"
-
+	popup_content = `
+	<h4>${evt_title}</h4>
+	<i>le ${evt_date}</i>
+	<a>lieu: ${evt_place}</a> 
+	<a>${evt_type}</a>
+	<p>${evt_description}</p>
+	<a>organisé par ${evt_organizer}</a>
+	`
 	new mapboxgl.Popup()
 	.setLngLat(coordinates)
 	.setHTML(popup_content)
