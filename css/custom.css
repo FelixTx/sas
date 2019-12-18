@@ -8,6 +8,10 @@ a {
 	width:100%;
 }
 
+.up {
+	text-transform: uppercase;
+}
+
 .landing .logo-milieu {
 	visibility: hidden;
 }
@@ -38,7 +42,7 @@ float: right;
 
 
 #banner div {
-	margin:auto;
+margin:auto;
 width: 80%;
 max-width: 1200px;
 background:white;
@@ -54,7 +58,7 @@ padding: 5em;
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 5em;
 	color: #e74632;
 }
 
@@ -182,11 +186,13 @@ tr p {
 
 	#banner {
 		padding-top:0;
-		margin-top: 60vw;
+		margin-top: 58vw;
 	}
-	#banner img {
-	width: 100%;
-	margin-top: -60vw;
+	#banner div {
+		width: 100%;
+	}
+	#banner div img {
+		margin-top: -60vw;
 	}
 	.footer-left, .footer-right {
 		width:auto;
@@ -198,15 +204,24 @@ tr p {
 	}
 
 	.navPanelToggle img {
-		background:white;
-	padding: 0.5em;
-	margin: 1em;
-	width: 4em;
-	border-radius: 5px;
+		background: white;
+		padding: 0.5em;
+		margin: 2em;
+		width: 6em;
+		border-radius: 5px;
+		float: right;
 	}
 
-	.landing .navPanelToggle img {
-		background-color: #c5caca;
+	#banner h4 {
+		position: absolute;
+		top: 2em; 
+	}
+
+	#banner h1 {
+		margin:0;
+		font-size: 1.5em;
+		text-transform:none;
+		color: #324b4b;
 	}
 
 	#navPanel div {
@@ -239,4 +254,9 @@ transform: rotate(-10deg);
 border-radius: 90px / 58px;
 -webkit-border-radius: 90px / 58px;
 -moz-border-radius: 90px / 58px;
+}
+
+#acteurs h3 {
+	margin-top: 2em;
+	margin-bottom: 0;
 }
