@@ -3090,29 +3090,13 @@
 
 		@media screen and (max-width: 1280px) {
 
-			#banner {
-				padding: 14em 0 11em 0;
-			}
-
 				#banner h2 {
 					font-size: 2.5em;
 				}
 
 		}
 
-		@media screen and (max-width: 980px) {
-
-			#banner {
-				padding: 9em 0 7em 0;
-			}
-
-		}
-
 		@media screen and (max-width: 736px) {
-
-			#banner {
-				padding: 6em 2em 6em 2em;
-			}
 
 				#banner br {
 					display: none;
@@ -3125,14 +3109,6 @@
 				#banner p {
 					font-size: 1.25em;
 				}
-
-		}
-
-		@media screen and (max-width: 480px) {
-
-			#banner {
-				padding: 4em 2em 4em 2em;
-			}
 
 		}
 
