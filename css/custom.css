@@ -37,11 +37,16 @@ float: right;
 }
 
 
-#banner img {
+#banner div {
+	margin:auto;
 width: 80%;
 max-width: 1200px;
 background:white;
 padding: 5em;
+}
+
+#banner div img {
+	margin-bottom: 2em;
 }
 
 .intro-r {
@@ -50,6 +55,10 @@ padding: 5em;
 
 h1 {
 	font-size: 3em;
+	color: #e74632;
+}
+
+h3 {
 	color: #e74632;
 }
 
@@ -178,31 +187,56 @@ tr p {
 	#banner img {
 	width: 100%;
 	margin-top: -60vw;
-}
-.footer-left, .footer-right {
-	width:auto;
-	margin-left:20%;
+	}
+	.footer-left, .footer-right {
+		width:auto;
+		margin-left:20%;
+	}
+
+	.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
+	    content: <img src="images/sas-logo.svg">;
+	}
+
+	.navPanelToggle img {
+		background:white;
+	padding: 0.5em;
+	margin: 1em;
+	width: 4em;
+	border-radius: 5px;
+	}
+
+	.landing .navPanelToggle img {
+		background-color: #c5caca;
+	}
+
+	#navPanel div {
+		width:80%;
+	}
 }
 
-
-
-.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
-    content: <img src="images/sas-logo.svg">;
+#manifeste li div{
+	font-size: 1.5em;
+	display: inline-block;
 }
 
-.navPanelToggle img {
-	background:white;
-padding: 0.5em;
-margin: 1em;
-width: 4em;
-border-radius: 5px;
+#manifeste .rotate {
+color: white;
+background-color: #e74632;
+padding: 0em 0.5em;
+margin: 0 1em;
+transform: rotate(10deg);
+border-radius: 50px / 35px;
+-webkit-border-radius: 50px / 35px;
+-moz-border-radius: 50px / 35px;
 }
 
-.landing .navPanelToggle img {
-	background-color: #c5caca;
-}
-
-#navPanel div {
-	width:80%;
-}
+#manifeste .rotate2 {
+color: white;
+background-color: #e74632;
+padding: 1em 0.5em;
+margin: 0 1em;
+transform: rotate(-10deg);
+border-radius: 90px / 58px;
+-webkit-border-radius: 90px / 58px;
+-moz-border-radius: 90px / 58px;
 }

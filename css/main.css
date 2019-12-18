@@ -1659,12 +1659,16 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h4, h5, h6 {
+	h1, h3, h5, h6 {
 		color: #484848;
 		font-weight: 500;
 		line-height: 1em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
+	}
+	h2 {
+				text-transform: uppercase;
+
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -3066,7 +3070,7 @@
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
-		text-align: center;
+		text-align: left;
 	}
 
 		#banner:last-child {
@@ -3074,7 +3078,6 @@
 		}
 
 		#banner h2 {
-			color: #ffffff;
 			display: inline-block;
 			font-size: 3.5em;
 			line-height: 1.35;
