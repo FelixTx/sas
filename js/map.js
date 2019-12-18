@@ -139,42 +139,25 @@ function loadmap(markers) {
 
 	map.on("load", function () {
 
-		var category = "Atelier";
+		const images =[
+		  {url: 'https://felixtx.github.io/sas/images/marker-Atelier.png', id: 'Atelier'},
+		  {url: 'https://felixtx.github.io/sas/images/marker-Autre.png', id: 'Autre'},
+		  {url: 'https://felixtx.github.io/sas/images/marker-Débat.png', id: 'Débat'},
+		  {url: 'https://felixtx.github.io/sas/images/marker-Exposition.png', id: 'Exposition'},
+		  {url: 'https://felixtx.github.io/sas/images/marker-Projection.png', id: 'Projection'},
+		  {url: 'https://felixtx.github.io/sas/images/marker-Rencontre.png', id: 'Rencontre'},
+		  {url: 'https://felixtx.github.io/sas/images/marker-Repas.png', id: 'Repas'}
+		]
 
-		/* Image: An image is loaded and added to the map. */
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Atelier.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Atelier", image);
-		});
-
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Autre.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Autre", image);
-		});
-
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Débat.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Débat", image);
-		});
-
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Exposition.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Exposition", image);
-		});
-		
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Projection.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Projection", image);
-		});		
-		
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Rencontre.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Rencontre", image);
-		});	
-
-		map.loadImage("https://felixtx.github.io/sas/images/marker-Repas.png", function(error, image) {
-			if (error) throw error;
-			map.addImage("Repas", image);
+        Promise.all(
+            images.map(img => new Promise((resolve, reject) => {
+                map.loadImage(img.url, function (error, res) {
+                    map.addImage(img.id, res);
+                    resolve();
+                })
+            }))
+        )
+        .then(
 
 			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
 			map.addLayer({
@@ -189,9 +172,11 @@ function loadmap(markers) {
 					"icon-image": "{type}",
 					"icon-allow-overlap": true
 				},
-				"filter": ["==", "type", category]
-			});
-		});	
+			//	"filter": ["==", "type", category]
+			})
+
+			// map.setFilter('events', ["in", "type", "Repas","Atelier"]);
+		);
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
 	// location of the feature, with description HTML from its properties.
