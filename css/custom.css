@@ -22,7 +22,7 @@ a {
 }
 
 #header nav .nav-droite ul {
-float: right;
+	float: right;
 }
 
 .text-gauche {
@@ -42,11 +42,11 @@ float: right;
 
 
 #banner div {
-margin:auto;
-width: 80%;
-max-width: 1200px;
-background:white;
-padding: 5em;
+	margin:auto;
+	width: 80%;
+	max-width: 1200px;
+	background:white;
+	padding: 5em;
 }
 
 #banner div img {
@@ -72,30 +72,46 @@ h3 {
 };
 
 .mapboxgl-popup {
-max-width: 400px;
-font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	max-width: 400px;
 }
 
-.marker {
-  background-image: url('mapbox-icon.png');
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
+.mapboxgl-popup-content p {
+	font-family: "Source Serif Pro", Arial, Helvetica, serif;
 }
+
+
+.filter-group {
+	font-size: 1.5em;
+	line-height:1.5em;
+	list-style: none;
+	background-color: #f7f7f7;
+	padding:1em;
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	z-index: 1;
+	border-radius: 3px;
+}
+
+.filter-group img {
+	height: 1em;
+}
+
+
+
+
 
 th select, th p{
 	background-color: #e74632;
 	text-transform: uppercase;
-	  color: white;
-	  	  display: inline;
-	  padding: 3px 3px;
-text-align: center;
-height: 2em;
-vertical-align: middle;
-font-size: 1em;
-line-height: 1em;
+	color: white;
+	display: inline;
+	padding: 3px 3px;
+	text-align: center;
+	height: 2em;
+	vertical-align: middle;
+	font-size: 1em;
+	line-height: 1em;
 }
 
 th select {
@@ -112,10 +128,10 @@ tr p {
 }
 
 .description {
-		min-width: 75%;	
-        max-height:300px;
-        overflow: hidden;
-    }
+	min-width: 75%;	
+	max-height:300px;
+	overflow: hidden;
+}
 .description h3 {
 	color: #e74632;
 }
@@ -200,7 +216,7 @@ tr p {
 	}
 
 	.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
-	    content: <img src="images/sas-logo.svg">;
+		content: <img src="images/sas-logo.svg">;
 	}
 
 	.navPanelToggle img {
@@ -235,25 +251,25 @@ tr p {
 }
 
 #manifeste .rotate {
-color: white;
-background-color: #e74632;
-padding: 0em 0.5em;
-margin: 0 1em;
-transform: rotate(10deg);
-border-radius: 50px / 35px;
--webkit-border-radius: 50px / 35px;
--moz-border-radius: 50px / 35px;
+	color: white;
+	background-color: #e74632;
+	padding: 0em 0.5em;
+	margin: 0 1em;
+	transform: rotate(10deg);
+	border-radius: 50px / 35px;
+	-webkit-border-radius: 50px / 35px;
+	-moz-border-radius: 50px / 35px;
 }
 
 #manifeste .rotate2 {
-color: white;
-background-color: #e74632;
-padding: 1em 0.5em;
-margin: 0 1em;
-transform: rotate(-10deg);
-border-radius: 90px / 58px;
--webkit-border-radius: 90px / 58px;
--moz-border-radius: 90px / 58px;
+	color: white;
+	background-color: #e74632;
+	padding: 1em 0.5em;
+	margin: 0 1em;
+	transform: rotate(-10deg);
+	border-radius: 90px / 58px;
+	-webkit-border-radius: 90px / 58px;
+	-moz-border-radius: 90px / 58px;
 }
 
 #acteurs h3 {

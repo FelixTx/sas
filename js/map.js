@@ -62,6 +62,8 @@ var markers = {
 		});
 	});
 
+
+
 })(jQuery);
 
 
@@ -148,11 +150,20 @@ function loadmap(markers) {
 		  {url: 'https://felixtx.github.io/sas/images/marker-Rencontre.png', id: 'Rencontre'},
 		  {url: 'https://felixtx.github.io/sas/images/marker-Repas.png', id: 'Repas'}
 		]
+		var filterGroup = document.getElementById('filter-group');
 
         Promise.all(
             images.map(img => new Promise((resolve, reject) => {
                 map.loadImage(img.url, function (error, res) {
                     map.addImage(img.id, res);
+/*                  var node = document.createElement("li");
+					var label = document.createElement('a');
+					var icon = document.createElement('img');
+					icon.setAttribute('src', img.url);
+					label.textContent = img.id;
+					node.appendChild(icon);
+					node.appendChild(label);
+					filterGroup.appendChild(node);*/
                     resolve();
                 })
             }))
@@ -176,6 +187,7 @@ function loadmap(markers) {
 			})
 
 			// map.setFilter('events', ["in", "type", "Repas","Atelier"]);
+
 		);
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
@@ -199,11 +211,10 @@ function loadmap(markers) {
 
 	popup_content = `
 	<h4>${evt_title}</h4>
-	<i>le ${evt_date}</i>
-	<a>lieu: ${evt_place}</a> 
-	<a>${evt_type}</a>
-	<p>${evt_description}</p>
-	<a>organisé par ${evt_organizer}</a>
+	<br><a><b>${evt_type}</b> - </a><i>${evt_date}</i>
+	<br><a>lieu: ${evt_place}</a> 
+	<br><a>organisé par <i>${evt_organizer}</i></a>
+	<br><p>${evt_description}</p>
 	`
 	new mapboxgl.Popup()
 	.setLngLat(coordinates)
