@@ -110,9 +110,10 @@ mapboxgl.accessToken = "pk.eyJ1IjoiZmVsaXh0IiwiYSI6ImNrM29reGh6dTBtYWYzcHFlYTI2d
 var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/streets-v11',
-	center: [2.340015,48.855838],
+	center: [2.568093, 47.181719],
 	maxZoom: 15,
-	zoom: 12
+	minZoom: 5,
+	zoom: 5
 });
 
 map.addControl(
