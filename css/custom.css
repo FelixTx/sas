@@ -178,6 +178,16 @@ tr p {
 	text-transform: uppercase;
 }
 
+#acteurs img {
+	padding-left: 5em;
+}
+
+#acteurs p {
+	margin-bottom: 1em;
+}
+
+
+
 #footer ul a, .legal a {
 	color: white;
 }
@@ -190,13 +200,13 @@ tr p {
 
 .presse {
 	transform: rotate(-10deg);
-	font-size: 1.5em;
-	padding: 0.3em 0.5em;
+	font-size: 1em;
+	padding: 1.2em 1.5em;
 	margin: 1em;
 	background:white;
-	border-radius: 90px / 50px;
-	-webkit-border-radius: 90px / 50px;
-	-moz-border-radius:    90px / 50px;
+	border-radius: 4em / 2em;
+	-webkit-border-radius: 4em / 2em;
+	-moz-border-radius:    4em / 2em;
 }
 
 .footer-left {
@@ -227,7 +237,7 @@ tr p {
 
 .participant {
 	margin: 3em 1em 0 0;
-	font-size: 1.5em;
+	font-size: 1em;
 	padding: 0.5em;
 	color: #ce3728;
 	background:white;
@@ -311,10 +321,11 @@ tr p {
 }
 
 #manifeste .rotate {
+	font-size: 1em;
 	color: white;
 	background-color: #e74632;
-	padding: 0em 0.5em;
-	margin: 0 1em;
+	padding: 0.2em 0.5em;
+	margin: 0 0.5em;
 	transform: rotate(10deg);
 	border-radius: 50px / 35px;
 	-webkit-border-radius: 50px / 35px;
@@ -324,7 +335,7 @@ tr p {
 #manifeste .rotate2 {
 	color: white;
 	background-color: #e74632;
-	padding: 1em 0.5em;
+	padding: 1.2em 0.5em;
 	margin: 0 1em;
 	transform: rotate(-10deg);
 	border-radius: 90px / 58px;

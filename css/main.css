@@ -1643,7 +1643,7 @@
 
 	h4 {
 		font-size: 1.5em;
-		line-height: 1em;
+		line-height: 1.2em;
 	}
 
 	h5 {
@@ -3054,7 +3054,7 @@
 /* Footer */
 
 	#footer {
-		padding: 4em 0 2em 0;
+		padding: 3em 0 2em 0;
 		background: #ce3728;
 		color: #aaa;
 	}
