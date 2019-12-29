@@ -8,6 +8,25 @@ a {
 	width:100%;
 }
 
+#nav div ul li a {
+	font-size: 1.2em;
+	line-height: 1.2em;
+}
+
+#nav a:hover, #nav a:active {
+	color: #e74632;
+}
+
+.nav-droite {
+	margin-top: 1em;
+	text-transform: uppercase;
+}
+
+.text-gauche, .logo-milieu {
+	vertical-align: top;
+	margin-top: 2em;
+}
+
 .up {
 	text-transform: uppercase;
 }
@@ -18,7 +37,7 @@ a {
 
 #nav div {
 	display: inline-block;
-	vertical-align: middle;
+	margin-top: : 1em;
 }
 
 #header nav .nav-droite ul {
@@ -40,10 +59,9 @@ a {
 	width: 100px;
 }
 
-
 #banner div {
 	margin:auto;
-	width: 80%;
+	width: 70%;
 	max-width: 1200px;
 	background:white;
 	padding: 5em;
@@ -51,6 +69,14 @@ a {
 
 #banner div img {
 	margin-bottom: 2em;
+}
+
+#banner h1 {
+	font-size: 3vw;
+	margin:0 0 0.5em 0;
+}
+.container{
+max-width: 90%;
 }
 
 .intro-r {
@@ -81,7 +107,7 @@ h3 {
 
 
 .filter-group {
-	font-size: 1.5em;
+	font-size: 1em;
 	line-height:1.5em;
 	list-style: none;
 	background-color: #f7f7f7;
@@ -93,12 +119,15 @@ h3 {
 	border-radius: 3px;
 }
 
-.filter-group img {
-	height: 1em;
+.filter-group li a{
+font-family: Liberation Sans;
+font-size: 1em;
 }
 
-
-
+.filter-group img {
+	height: 1em;
+	margin-right: 5px;
+}
 
 
 th select, th p{
@@ -106,7 +135,7 @@ th select, th p{
 	text-transform: uppercase;
 	color: white;
 	display: inline;
-	padding: 3px 3px;
+	padding: 3px 5px;
 	text-align: center;
 	height: 2em;
 	vertical-align: middle;
@@ -121,6 +150,9 @@ th select:hover {
 	cursor: pointer; 
 }
 
+tr h3 {
+	margin-bottom:0;
+}
 
 tr p {
 	max-height: 300px;
@@ -128,12 +160,14 @@ tr p {
 }
 
 .description {
-	min-width: 75%;	
+	min-width: 40%;	
 	max-height:300px;
 	overflow: hidden;
+	padding-left:0;
 }
 .description h3 {
 	color: #e74632;
+	text-transform: uppercase;
 }
 
 #footer ul a, .legal a {
@@ -148,9 +182,8 @@ tr p {
 
 .presse {
 	transform: rotate(-10deg);
-	font-size: 2em;
-	line-height: 2em;
-	padding: 0.5em;
+	font-size: 1.5em;
+	padding: 1em;
 	margin: 1em;
 	background:white;
 	border-radius: 90px / 50px;
@@ -159,14 +192,19 @@ tr p {
 }
 
 .footer-left {
-	width:45%;
+	width:40%;
 }
 .footer-right {
-	width:54%;
+	width:59%;
 }
 .social, .acteurs {
 	float: right;
-	margin: 3em 5em 0 0;
+	margin: 3em 3em 0 0;
+}
+
+.social ul {
+	list-style: none;
+	font-size:1.2em;
 }
 
 .presse a, .participant a {	
@@ -175,12 +213,13 @@ tr p {
 }
 
 .legal {
-	font-weight: 300;
+	font-family: Source Serif Pro;
+	font-size: 0.8em;
 }
 
 .participant {
 	margin: 3em 1em 0 0;
-	font-size: 2em;
+	font-size: 1.5em;
 	padding: 0.5em;
 	color: #ce3728;
 	background:white;
@@ -190,6 +229,14 @@ tr p {
 #footer .acteurs img {
 	height: 30px;
 }
+@media screen and (max-width: 1300px) {
+	.footer-left, .footer-right {
+		width: 100%;
+		text-align: center;
+	}
+	.footer-right div {
+		float: none;
+	}
 
 @media screen and (max-width: 980px) {
 	#event-list td, th {

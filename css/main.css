@@ -84,31 +84,6 @@
 		width: 80em;
 	}
 
-	@media screen and (max-width: 1680px) {
-
-		.container.\31 25\25 {
-			width: 100%;
-			max-width: 100em;
-			min-width: 80em;
-		}
-
-		.container.\37 5\25 {
-			width: 60em;
-		}
-
-		.container.\35 0\25 {
-			width: 40em;
-		}
-
-		.container.\32 5\25 {
-			width: 20em;
-		}
-
-		.container {
-			width: 80em;
-		}
-
-	}
 
 	@media screen and (max-width: 1280px) {
 
@@ -1592,36 +1567,24 @@
 	}
 
 	body, input, select, textarea {
-		font-family: "Source Serif Pro", Arial, Helvetica, serif;
-		font-size: 13pt;
+		font-family: Source serif pro, Times, Georgia, Serif;
+		font-size: 16pt;
 		font-weight: 400;
-		line-height: 2em;
+		line-height: 1.2em;
 	}
 
-	header, footer, h1, h2, h3, h4, h5, h6, li, th, select {
-		font-family: "Anton", Arial, Helvetica, sans-serif;
+	header, footer, h1, h2, h3, h4, h5, h6, li, th, tr a, select {
+		font-family: Anton, Arial, Helvetica, sans-serif;
 	}
-	
-		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 16pt;
 			}
-
-		}
-
-		@media screen and (max-width: 1280px) {
-
-			body, input, select, textarea {
-				font-size: 11pt;
-			}
-
-		}
 
 		@media screen and (max-width: 980px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -1629,7 +1592,7 @@
 		@media screen and (max-width: 736px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -1637,7 +1600,7 @@
 		@media screen and (max-width: 480px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -2120,7 +2083,6 @@
 		.select-wrapper:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2186,7 +2148,6 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -2266,7 +2227,6 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -2549,7 +2509,6 @@
 		color: #aaa;
 		position: relative;
 		margin: 0 0 1.5em 0;
-		text-transform: uppercase;
 	}
 
 	header h2 + p {
@@ -2590,21 +2549,6 @@
 			margin-bottom: 0;
 		}
 
-	@media screen and (max-width: 1280px) {
-
-		header.major {
-			margin-bottom: 4em;
-		}
-
-			header.major h2 {
-				font-size: 2.5em;
-			}
-
-			header.major p {
-				font-size: 1.3em;
-			}
-
-	}
 
 	@media screen and (max-width: 980px) {
 
@@ -2647,7 +2591,7 @@
 	}
 
 		table tbody tr {
-			border: solid 5px #ce3728;
+			border: solid 8px #ce3728;
 			border-left: 0;
 			border-right: 0;
 		}
@@ -2659,7 +2603,6 @@
 
 		table th {
 			color: #484848;
-			font-size: 0.9em;
 			padding: 0 0.75em 0.75em 0.75em;
 			text-align: left;
 		}
@@ -2732,13 +2675,6 @@
 					color: #ffffff;
 				}
 
-				@media screen and (max-width: 1280px) {
-
-					.wrapper.style3 header.major {
-						margin-bottom: 2em;
-					}
-
-				}
 
 		@media screen and (max-width: 980px) {
 
@@ -2772,12 +2708,11 @@
 		box-shadow: 0px 0.0375em 0.125em 0px rgba(0, 0, 0, 0.05);
 		color: #324b4b;
 		cursor: default;
-		font-size: 1.25em;
+		font-size: 0.8em;
 		height: 4.5em;
 		left: 0;
 		line-height: 4.4em;
 		position: fixed;
-		text-transform: uppercase;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
@@ -2828,7 +2763,10 @@
 					}
 
 						#header nav ul li a:hover {
-							color: #484848;
+							color: #e74632;
+						}
+						#header nav ul li a:active {
+							color: #e74632;
 						}
 
 					#header nav ul li:first-child {
@@ -3086,13 +3024,6 @@
 			text-transform: uppercase;
 		}
 
-		@media screen and (max-width: 1280px) {
-
-				#banner h2 {
-					font-size: 2.5em;
-				}
-
-		}
 
 		@media screen and (max-width: 736px) {
 
@@ -3113,13 +3044,13 @@
 /* Main */
 
 	#main {
-		padding-top: 4em;
+		padding-top: 2em;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			#main {
-				padding-top: 2em;
+				padding-top: 1em;
 			}
 
 		}
@@ -3127,7 +3058,7 @@
 /* Footer */
 
 	#footer {
-		padding: 2em 0 6em 0;
+		padding: 4em 0 2em 0;
 		background: #ce3728;
 		color: #aaa;
 	}

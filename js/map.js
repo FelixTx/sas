@@ -63,7 +63,6 @@ var markers = {
 	});
 
 
-
 })(jQuery);
 
 
@@ -84,9 +83,9 @@ function generateHtmlTable(data) {
 		  	<h3>${row.title}</h3>
 		  	<p>${row.description}</p>
 		  	</div></td>
-		  	<td class="type">${row.type}</td>
-		  	<td class="city">${row.city}</td>
-		  	<td class="date">${row.date}</td>
+		  	<td class="type"><a>${row.type}</a></td>
+		  	<td class="city"><a>${row.city}, ${row.postcode}</a></td>
+		  	<td class="date"><a>${row.date}</a></td>
 		  	</tr>'`;
 
 	  		cities.add(row.city);
