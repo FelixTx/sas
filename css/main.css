@@ -69,7 +69,7 @@
 	}
 
 	.container.\37 5\25 {
-		width: 60em;
+		width: 50em;
 	}
 
 	.container.\35 0\25 {
@@ -94,7 +94,7 @@
 		}
 
 		.container.\37 5\25 {
-			width: 48.75em;
+			width: 40em;
 		}
 
 		.container.\35 0\25 {
@@ -1576,10 +1576,6 @@
 	header, footer, h1, h2, h3, h4, h5, h6, li, th, tr a, select {
 		font-family: Anton, Arial, Helvetica, sans-serif;
 	}
-
-			body, input, select, textarea {
-				font-size: 16pt;
-			}
 
 		@media screen and (max-width: 980px) {
 
