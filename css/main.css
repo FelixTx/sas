@@ -1633,7 +1633,6 @@
 
 	h2 {
 		font-size: 2em;
-		line-height: 1.5em;
 	}
 
 	h3 {
@@ -2644,7 +2643,7 @@
 	}
 
 	.wrapper {
-		margin: 10em 0 4em 0;
+		margin: 4em 0 4em 0;
 	}
 
 		.wrapper > .inner {
@@ -2797,7 +2796,7 @@
 			background-color: transparent;
 			border: 0;
 			box-shadow: none;
-			height: 3.25em;
+			height: 6em;
 			line-height: 3.25em;
 			position: absolute;
 		}

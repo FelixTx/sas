@@ -1,3 +1,7 @@
+.wrapper:first-of-type {
+	margin-top : 10em;
+}
+
 a {
 	text-decoration: none;
 	color: #324b4b;
@@ -183,6 +187,7 @@ tr p {
 
 #acteurs p {
 	margin-bottom: 1em;
+	padding-left: 5em;
 }
 
 
