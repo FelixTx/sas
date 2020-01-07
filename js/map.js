@@ -81,6 +81,8 @@ function generateHtmlTable(data) {
 		  	html_list += `<tr>
 		  	<td class="description"><div>
 		  	<h3>${row.title}</h3>
+		  	<a class="list">type: ${row.type}</a>
+		  	<a class="list">${row.date}  -  ${row.city}, ${row.postcode}</a>
 		  	<p>${row.description}</p>
 		  	</div></td>
 		  	<td class="type"><a>${row.type}</a></td>
@@ -118,6 +120,7 @@ var map = new mapboxgl.Map({
 map.addControl(
 	new MapboxGeocoder({
 		accessToken: mapboxgl.accessToken,
+		countries: 'fr',
 		language: 'fr-FR',
 		marker: false,
 		placeholder: '     Où habitez-vous ?',
