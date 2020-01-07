@@ -3,16 +3,11 @@ a {
 	color: #324b4b;
 }
 
-section.style1 p {
-	padding-left: 5em;
-}
-
 p.ind {
 	text-indent: 2em;
 }
 
 #nav {
-	padding: 0 1em; 
 	width:100%;
 }
 
@@ -32,7 +27,10 @@ p.ind {
 
 .text-gauche, .logo-milieu {
 	vertical-align: top;
-	margin-top: 2em;
+	margin: 2em 0 0 2em;
+}
+
+.text-gauche ul {
 	max-width: 425px;
 }
 
@@ -70,10 +68,10 @@ p.ind {
 
 #banner div {
 	margin:auto;
-	width: 70%;
+	width: 60%;
 	max-width: 1200px;
 	background:white;
-	padding: 5em;
+	padding: 3em;
 }
 
 #banner div img {
