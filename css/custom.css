@@ -190,7 +190,12 @@ tr p {
 	padding-left: 5em;
 }
 
+@media screen and (min-width: 1280px) {
 
+#footer .container {
+	max-width: 1300px;
+}
+}
 
 #footer ul a, .legal a, .acteurs p, .partners p {
 	color: white;
@@ -253,7 +258,7 @@ tr p {
 #footer .acteurs img {
 	height: 30px;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1280px) {
 	.footer-left, .footer-right {
 		width: 100%;
 		text-align: center;
@@ -302,10 +307,6 @@ tr p {
 
 	h2 {
 		font-size:1.5em;
-	}
-
-	.footer-left, .footer-right {
-		width:auto;
 	}
 
 	.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
