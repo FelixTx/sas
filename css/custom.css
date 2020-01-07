@@ -21,7 +21,7 @@ p.ind {
 	line-height: 1.2em;
 }
 
-#nav a:hover, #nav a:active {
+#nav a:hover, #nav a.active {
 	color: #e74632;
 }
 
@@ -33,6 +33,7 @@ p.ind {
 .text-gauche, .logo-milieu {
 	vertical-align: top;
 	margin-top: 2em;
+	max-width: 425px;
 }
 
 .up {
@@ -258,6 +259,21 @@ tr p {
 }
 
 @media screen and (max-width: 980px) {
+
+	#banner div {
+		margin:auto;
+		width: 70%;
+		max-width: 1200px;
+		background:white;
+		padding: 1em;
+	}
+
+	h4 {
+		font-size: 0.8em;
+		max-width: 70%;
+	}
+
+
 	#event-list td, th {
 		display: inline;
 	}
@@ -275,10 +291,16 @@ tr p {
 	}
 	#banner div img {
 		margin-top: -60vw;
+		padding-top: 5em;
+		margin-bottom: 0;
 	}
+
+	h2 {
+		font-size:1.5em;
+	}
+
 	.footer-left, .footer-right {
 		width:auto;
-		margin-left:20%;
 	}
 
 	.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
@@ -288,8 +310,8 @@ tr p {
 	.navPanelToggle img {
 		background: white;
 		padding: 0.5em;
-		margin: 2em;
-		width: 6em;
+		margin: 1em;
+		width: 4em;
 		border-radius: 5px;
 		float: right;
 	}
@@ -301,7 +323,7 @@ tr p {
 
 	#banner h1 {
 		margin:0;
-		font-size: 1.5em;
+		font-size: 0.8em;
 		text-transform:none;
 		color: #324b4b;
 	}

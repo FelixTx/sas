@@ -214,7 +214,7 @@ function loadmap(markers) {
 	<br><a><b>${evt_type}</b> - </a><i>${evt_date}</i>
 	<br><a>lieu: ${evt_place}</a> 
 	<br><a>organisé par <i>${evt_organizer}</i></a>
-	<br><p>${evt_description}</p>
+	<p><br>${evt_description}</p>
 	`
 	new mapboxgl.Popup()
 	.setLngLat(coordinates)
