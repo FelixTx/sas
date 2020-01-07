@@ -241,6 +241,11 @@ tr p {
 .footer-right {
 	width:66%;
 }
+
+.social {
+	margin-top: 2.7em !important;
+}
+
 .footer-right div {
 	float: right;
 	margin: 3em 3em 0 0;
