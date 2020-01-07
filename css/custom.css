@@ -192,8 +192,9 @@ tr p {
 
 
 
-#footer ul a, .legal a {
+#footer ul a, .legal a, .acteurs p, .partners p {
 	color: white;
+	font-size: 0.8em;
 }
 
 
@@ -214,12 +215,12 @@ tr p {
 }
 
 .footer-left {
-	width:44%;
+	width:33%;
 }
 .footer-right {
-	width:55%;
+	width:66%;
 }
-.social, .acteurs {
+.footer-right div {
 	float: right;
 	margin: 3em 3em 0 0;
 }
@@ -227,6 +228,7 @@ tr p {
 .social ul {
 	list-style: none;
 	font-size:1.2em;
+	line-height:1.2em;
 }
 
 .presse a, .participant a {	
@@ -333,6 +335,10 @@ tr p {
 
 	#navPanel div {
 		width:80%;
+	}
+
+	.footer-left {
+		display: none !important;
 	}
 }
 
