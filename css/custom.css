@@ -60,9 +60,6 @@ p.ind {
 }
 
 .logo-milieu {
-	text-align: center;
-}
-.logo-milieu {
 	height: 56px;
 }
 
@@ -140,10 +137,6 @@ font-size: 1em;
 	margin-right: 5px;
 }
 
-#event-list {
-	max-height: 80vh;
-	overflow-y: scroll;
-}
 
 th select, th p{
 	background-color: #e74632;
@@ -224,6 +217,10 @@ tr p {
 	vertical-align: top;
 }
 
+#footer ul, #footer li {
+	padding-left: 0;
+}
+
 .presse {
 	transform: rotate(-10deg);
 	font-size: 1em;
@@ -246,9 +243,17 @@ tr p {
 	margin-top: 2.7em !important;
 }
 
-.footer-right div {
-	float: right;
-	margin: 3em 3em 0 0;
+@media screen and (min-width: 720px) {
+	.footer-right div {
+		float: right;
+		margin: 3em 3em 0 0;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.footer-right div {
+		width: 100%;
+	}
 }
 
 .social ul {
@@ -296,12 +301,12 @@ tr p {
 		width: 70%;
 		max-width: 1200px;
 		background:white;
-		padding: 1em;
+		padding: 2em;
 	}
 
 	#banner h4 {
 		font-size: 0.8em;
-		max-width: 70%;
+		max-width: 21em;
 	}
 
 
@@ -376,6 +381,14 @@ tr p {
 	.footer-left {
 		display: none !important;
 	}
+
+	.footer-right div {
+		padding: 0;
+	}
+
+	.footer-right div img {
+		max-height: 2em;
+	}
 }
 
 #reflexions h3 {
@@ -416,4 +429,21 @@ tr p {
 #acteurs h3 {
 	margin-top: 2em;
 	margin-bottom: 0;
+}
+
+#navPanel .logo-milieu {
+	height: auto;
+}
+
+#navPanel .logo-milieu img {
+	width: 12em;
+	margin-bottom: 2em;
+	filter: invert(100%) sepia(100%) brightness(500%);
+}
+
+#navPanel .nav-droite {
+	width: auto;
+	font-size: 2em;
+	margin: 1em; 
+	line-height: 1.5em;
 }
