@@ -9,7 +9,8 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		url: "https://felixtx.github.io/sas/events.csv?" + Math.random(),
+		// url: "https://felixtx.github.io/sas/events.csv?" + Math.random(),
+		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=csv",
 		dataType: "text",       
 		success: function(response)  
 		{
