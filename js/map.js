@@ -37,12 +37,12 @@ var markers = {
 
 	function CSV2JSON(csv) {
 		var lines = csv.split("\n");
-		var titles = lines[0].split(";");
+		var titles = lines[0].split('\t');
 		var data = new Array(lines.length - 1);
 
 		for (var i = 1; i < lines.length; i++) {
 			data[i - 1] = {};
-			lines[i] = lines[i].split(";");
+			lines[i] = lines[i].split('\t');
 			for (var j = 0; j < titles.length; j++) {
 				data[i - 1][titles[j]] = lines[i][j];
 			}
