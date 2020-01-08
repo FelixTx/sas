@@ -17,8 +17,6 @@ var markers = {
 			data = CSV2JSON(response);
 
 			data.forEach( m => {
-				console.log(m.long);
-				console.log(m.lat);
 				events.push({
 					"type": "Feature",
 					"geometry" : {"type" : "Point", "coordinates":[parseFloat(m.long), parseFloat(m.lat)]},
@@ -29,7 +27,6 @@ var markers = {
 			});
 
 			markers.features = events;
-			console.log(markers);
 			generateHtmlTable(data);
 			loadmap(markers);
 		}
