@@ -296,6 +296,9 @@ tr p {
 
 @media screen and (max-width: 980px) {
 
+h1 {
+	font-size: 2.5em;
+}
 	#banner div {
 		margin:auto;
 		width: 70%;

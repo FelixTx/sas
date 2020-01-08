@@ -1772,18 +1772,6 @@
 			background-color: #e63a29;
 		}
 
-		@media screen and (max-width: 480px) {
-
-			input[type="submit"],
-			input[type="reset"],
-			input[type="button"],
-			button,
-			.button {
-				padding: 0;
-			}
-
-		}
-
 /* Feature */
 
 	.feature-grid {
