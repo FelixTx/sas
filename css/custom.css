@@ -453,3 +453,36 @@ tr p {
 	margin: 1em; 
 	line-height: 1.5em;
 }
+
+.books {
+	display: inline-block;
+}
+
+.book {
+	width: 48%;
+	display: inline-block;
+}
+
+.book .details {
+	display: inline-block;
+	width: 69%;
+	vertical-align: top;
+	padding:0.5em;
+}
+
+.details p {
+	margin-top: 0.5em;
+}
+
+.details h4 {
+	font-size: 1.2em;
+}
+
+.cover {
+	display: inline-block;
+	width: 29%;
+}
+
+.cover img {
+	width: 100%;
+}
