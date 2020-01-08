@@ -185,7 +185,7 @@ function loadmap(markers) {
 				layout: {
 					"icon-image": "{type}",
 					"icon-allow-overlap": true,
-					"icon-size": .5
+					"icon-size": .7
 				},
 			//	"filter": ["==", "type", category]
 			})
