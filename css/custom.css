@@ -531,3 +531,8 @@ iframe .exportHeader {
 .freebirdFormviewerViewNoPadding {
 	visibility: hidden;
 }
+
+.mapboxgl-popup-close-button {
+	color:#324B4B;
+	line-height: 2em;
+}
