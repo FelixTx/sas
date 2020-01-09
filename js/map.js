@@ -9,8 +9,8 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		//url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
-		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
+		url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
+		//url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
 		dataType: "text",    
 		success: function(response)  
 		{
@@ -204,7 +204,8 @@ function loadmap(markers) {
 		var evt_title = e.features[0].properties.title;
 		var evt_type = e.features[0].properties.type;
 		var evt_place = e.features[0].properties.location_name;
-		var evt_date = e.features[0].properties.date;
+		var start_date = e.features[0].properties.start_date;
+		var end_date = e.features[0].properties.end_date;
 		var evt_organizer = e.features[0].properties.organizer;
 
 
@@ -214,13 +215,11 @@ function loadmap(markers) {
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
-
+	if (end_date) {date_string = start_date + " - " + end_date} else {	date_string = start_date };
 	popup_content = `
 	<h4>${evt_title}</h4>
-	<br><a>
-	<img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px">
-	<b>${evt_type}</b> - </a><i>${evt_date}</i>
-	<br><a>lieu: ${evt_place}</a> 
+	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;"><b>${evt_type}</b> - </a><i>${date_string}</i>
+	<br><a>lieu: ${evt_place}</a>
 	<br><a>organisé par <i>${evt_organizer}</i></a>
 	<p><br>${evt_description}</p>
 	`
