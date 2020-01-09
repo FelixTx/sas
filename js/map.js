@@ -17,11 +17,14 @@ var markers = {
 			data = CSV2JSON(response);
 
 			data.forEach( m => {
-				events.push({
-					"type": "Feature",
-					"geometry" : {"type" : "Point", "coordinates":[parseFloat(m.long), parseFloat(m.lat)]},
-					"properties": m
-				});
+				if (m.validated) {
+					console.log(m.validated);
+					events.push({
+						"type": "Feature",
+						"geometry" : {"type" : "Point", "coordinates":[parseFloat(m.long), parseFloat(m.lat)]},
+						"properties": m
+					});
+				}
 				delete(m.lat);
 				delete(m.long);
 			});
