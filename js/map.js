@@ -17,8 +17,8 @@ var markers = {
 			data = CSV2JSON(response);
 
 			data.forEach( m => {
+				console.log(m.validated);
 				if (m.validated) {
-					console.log(m.validated);
 					events.push({
 						"type": "Feature",
 						"geometry" : {"type" : "Point", "coordinates":[parseFloat(m.long), parseFloat(m.lat)]},
