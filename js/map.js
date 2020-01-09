@@ -114,7 +114,7 @@ var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/mapbox/streets-v11',
 	center: [2.568093, 47.181719],
-	maxZoom: 15,
+	maxZoom: 14,
 	minZoom: 5,
 	zoom: 6
 });
