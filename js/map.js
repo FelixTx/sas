@@ -38,7 +38,9 @@ var markers = {
 
 
 	function CSV2JSON(csv) {
+		console.log(csv);
 		var lines = csv.split("\r");
+		console.log(lines);
 		var titles = lines[0].split('\t');
 		var data = new Array(lines.length - 1);
 
