@@ -306,6 +306,9 @@ tr p {
 		float: none;
 	}
 }
+	#banner h4 {
+		font-size: 2vw;
+	}
 
 @media screen and (max-width: 980px) {
 	.wrapper:first-of-type {
@@ -324,10 +327,10 @@ tr p {
 	}
 
 	#banner h4 {
-		font-size: 1vw;
+		font-size: 1em;
 		max-width: 21em;
 		position: absolute;
-		top: 2em; 
+		top: 1.5em; 
 	}
 
 	#event-list td, th {
@@ -384,7 +387,6 @@ tr p {
 
 	#banner h1 {
 		margin:0;
-		font-size: 0.8em;
 		text-transform:none;
 		color: #324b4b;
 	}
@@ -520,4 +522,12 @@ tr p {
 
 iframe .exportHeader {
 	display: none;
+}
+
+.freebirdFormviewerViewFooterFooterContainer {
+	display: none !important;
+}
+
+.freebirdFormviewerViewNoPadding {
+	visibility: hidden;
 }
