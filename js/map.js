@@ -217,7 +217,7 @@ function loadmap(markers) {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
 	if (end_date) {date_string = "du " + start_date + " au " + end_date} else { date_string = "le " + start_date };
-	if (end_time) {date_string = "de " + start_time + " à " + end_time} else { time_string = "à " + start_time };
+	if (end_time) {time_string = "de " + start_time + " à " + end_time} else { time_string = "à " + start_time };
 	popup_content = `
 	<h4>${evt_title}</h4>
 	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;"><b>${evt_type}</b> - </a><i>${date_string} - ${time_string}</i>
