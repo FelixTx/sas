@@ -197,12 +197,11 @@ tr p {
 }
 
 #acteurs img {
-	padding-left: 5em;
+	height: 50px;
 }
 
 #acteurs p {
 	margin-bottom: 1em;
-	padding-left: 5em;
 }
 
 @media screen and (min-width: 1280px) {
@@ -432,6 +431,7 @@ tr p {
 }
 
 #manifeste .rotate2 {
+	font-size: 1.5em;
 	color: white;
 	background-color: #e74632;
 	padding: 1.2em 0.5em;
@@ -477,7 +477,7 @@ tr p {
 	display: inline-block;
 	width: 69%;
 	vertical-align: top;
-	padding:0.5em;
+	padding:0 0.5em;
 }
 
 .details p {
@@ -485,7 +485,7 @@ tr p {
 }
 
 .details h4 {
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 .cover {
@@ -512,4 +512,12 @@ tr p {
 
 .orga-button {
 	margin-top: 1em;
+}
+
+#reflexions h4 {
+	line-height: 1.2em;
+}
+
+iframe .exportHeader {
+	display: none;
 }
