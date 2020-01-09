@@ -2594,13 +2594,6 @@
 						text-decoration: none;
 					}
 
-						#header nav ul li a:hover {
-							color: #e74632;
-						}
-						#header nav ul li a:active {
-							color: #e74632;
-						}
-
 					#header nav ul li:first-child {
 						margin-left: 0;
 					}

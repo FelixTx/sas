@@ -20,7 +20,7 @@ p.ind {
 	line-height: 1.2em;
 }
 
-#nav a:hover, #nav a.active {
+#nav .nav-droite a:hover, #nav .nav-droite a.active {
 	color: #e74632;
 }
 
@@ -326,7 +326,7 @@ tr p {
 	h3 {
 		font-size: 1em;
 	}
-	
+
 	#banner div {
 		margin:auto;
 		width: 70%;
