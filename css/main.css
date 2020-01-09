@@ -1753,7 +1753,7 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #ce3728;
+		background-color: #e74632;
 		color: #ffffff !important;
 		border: 0;
 		cursor: pointer;
@@ -1769,7 +1769,7 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			background-color: #e63a29;
+			background-color: #e34e3b;
 		}
 
 /* Feature */
@@ -2891,7 +2891,7 @@
 
 	#footer {
 		padding: 3em 0 2em 0;
-		background: #ce3728;
+		background: #e74632;
 		color: #aaa;
 	}
 

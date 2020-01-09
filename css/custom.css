@@ -495,3 +495,7 @@ tr p {
 #application h2 {
 	text-transform: uppercase;
 }
+
+#main h2 {
+	line-height: 1.2em;
+}
