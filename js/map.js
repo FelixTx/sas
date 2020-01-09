@@ -9,7 +9,7 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		// url: "https://felixtx.github.io/sas/events.csv?" + Math.random(),
+		//url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
 		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
 		dataType: "text",    
 		success: function(response)  
@@ -84,7 +84,7 @@ function generateHtmlTable(data) {
 		  	<td class="description"><div>
 		  	<h3>${row.title}</h3>
 		  	<a class="list">type: ${row.type}</a>
-		  	<a class="list">${row.date}  -  ${row.city}, ${row.postcode}</a>
+		  	<a class="list">${row.start_date}  -  ${row.city}, ${row.postcode}</a>
 		  	<p>${row.description}</p>
 		  	</div></td>
 		  	<td class="type"><a>${row.type}</a></td>
@@ -217,7 +217,9 @@ function loadmap(markers) {
 
 	popup_content = `
 	<h4>${evt_title}</h4>
-	<br><a><b>${evt_type}</b> - </a><i>${evt_date}</i>
+	<br><a>
+	<img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px">
+	<b>${evt_type}</b> - </a><i>${evt_date}</i>
 	<br><a>lieu: ${evt_place}</a> 
 	<br><a>organisé par <i>${evt_organizer}</i></a>
 	<p><br>${evt_description}</p>
