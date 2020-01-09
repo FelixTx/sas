@@ -9,8 +9,8 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
-		//url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
+		//url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
+		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
 		dataType: "text",    
 		success: function(response)  
 		{
@@ -27,7 +27,7 @@ var markers = {
 				delete(m.lat);
 				delete(m.long);
 			});
-
+			console.log(markers);
 			markers.features = events;
 			generateHtmlTable(data);
 			loadmap(markers);
@@ -37,7 +37,9 @@ var markers = {
 
 
 	function CSV2JSON(csv) {
+		console.log(csv);
 		var lines = csv.split("\r");
+		console.log(lines);
 		var titles = lines[0].split('\t');
 		var data = new Array(lines.length - 1);
 
@@ -48,7 +50,7 @@ var markers = {
 				data[i - 1][titles[j]] = lines[i][j];
 			}
 		}
-
+		console.log(data);
 		return data
 	}
 
@@ -206,6 +208,8 @@ function loadmap(markers) {
 		var evt_place = e.features[0].properties.location_name;
 		var start_date = e.features[0].properties.start_date;
 		var end_date = e.features[0].properties.end_date;
+		var start_time = e.features[0].properties.start_time;
+		var end_time = e.features[0].properties.end_time;
 		var evt_organizer = e.features[0].properties.organizer;
 
 
@@ -215,10 +219,11 @@ function loadmap(markers) {
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
-	if (end_date) {date_string = start_date + " - " + end_date} else {	date_string = start_date };
+	if (end_date) {date_string = "du " + start_date + " au " + end_date} else { date_string = "le " + start_date };
+	if (end_time) {date_string = "de " + start_time + " à " + end_time} else { time_string = "à " + start_time };
 	popup_content = `
 	<h4>${evt_title}</h4>
-	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;"><b>${evt_type}</b> - </a><i>${date_string}</i>
+	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;"><b>${evt_type}</b> - </a><i>${date_string} - ${time_string}</i>
 	<br><a>lieu: ${evt_place}</a>
 	<br><a>organisé par <i>${evt_organizer}</i></a>
 	<p><br>${evt_description}</p>
