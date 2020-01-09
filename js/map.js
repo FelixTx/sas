@@ -45,7 +45,7 @@ var markers = {
 			data[i - 1] = {};
 			lines[i] = lines[i].split('\t');
 			for (var j = 0; j < titles.length; j++) {
-				data[i - 1][titles[j]] = lines[i][j];
+				data[i - 1][titles[j]] = lines[i][j] ? lines[i][j].trim(): undefined;
 			}
 		}
 		return data
