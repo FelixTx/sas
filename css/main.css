@@ -1758,12 +1758,11 @@
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		line-height: 3.25em;
+		line-height: 4.25em;
 		padding: 0 1.2em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
-		margin-top:1em;
 	}
 
 		input[type="button"]:hover,
@@ -2903,7 +2902,7 @@
 			text-decoration: none;
 		}
 
-			#footer a:active, #footer a:hover {
+			#footer li a:hover {
 				opacity: 0.8;
 			}
 

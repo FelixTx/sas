@@ -116,7 +116,7 @@ var map = new mapboxgl.Map({
 	center: [2.568093, 47.181719],
 	maxZoom: 15,
 	minZoom: 5,
-	zoom: 5
+	zoom: 6
 });
 
 map.addControl(

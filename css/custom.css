@@ -195,9 +195,6 @@ tr p {
 .orga-text {
 	margin-bottom: 0;
 }
-.orga-button {
-	text-align: center;
-}
 
 #acteurs img {
 	padding-left: 5em;
@@ -215,6 +212,10 @@ tr p {
 	}
 }
 
+#footer p {
+	font-family: Source serif pro, Times, Georgia, Serif;
+}
+
 #footer ul a, .legal a, .acteurs p, .partners p {
 	color: white;
 	font-size: 0.8em;
@@ -228,6 +229,10 @@ tr p {
 
 #footer ul, #footer li {
 	padding-left: 0;
+}
+
+.footer-left a:hover {
+	color: #324b4b;
 }
 
 .presse {
@@ -498,4 +503,13 @@ tr p {
 
 #main h2 {
 	line-height: 1.2em;
+}
+
+.media-logo img {
+	width: 30%;
+	margin: 1em;
+}
+
+.orga-button {
+	margin-top: 1em;
 }
