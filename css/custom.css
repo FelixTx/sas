@@ -25,13 +25,22 @@ p.ind {
 }
 
 .nav-droite {
+	width: 44%;
 	margin-top: 1em;
 	text-transform: uppercase;
 }
 
 .text-gauche, .logo-milieu {
 	vertical-align: top;
-	margin: 2em 0 0 2em;
+	margin: 2em 0 0 2%;
+}
+
+.text-gauche {
+	width: 44%;
+}
+
+.logo-milieu {
+	width: 6%;
 }
 
 .text-gauche ul {
@@ -311,10 +320,11 @@ tr p {
 	}
 
 	#banner h4 {
-		font-size: 0.8em;
+		font-size: 1vw;
 		max-width: 21em;
+		position: absolute;
+		top: 2em; 
 	}
-
 
 	#event-list td, th {
 		display: inline;
@@ -366,11 +376,6 @@ tr p {
 		width: 4em;
 		border-radius: 5px;
 		float: right;
-	}
-
-	#banner h4 {
-		position: absolute;
-		top: 2em; 
 	}
 
 	#banner h1 {
@@ -485,4 +490,8 @@ tr p {
 
 .cover img {
 	width: 100%;
+}
+
+#application h2 {
+	text-transform: uppercase;
 }
