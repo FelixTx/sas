@@ -45,7 +45,9 @@ var markers = {
 			data[i - 1] = {};
 			lines[i] = lines[i].split('\t');
 			for (var j = 0; j < titles.length; j++) {
-				data[i - 1][titles[j]] = lines[i][j] ? lines[i][j].trim(): undefined;
+				if (lines[i][j]) {
+				data[i - 1][titles[j]] = lines[i][j].trim();					
+				}
 			}
 		}
 		return data
@@ -71,12 +73,16 @@ function generateHtmlTable(data) {
 	var html_list = '';
 	var cities = new Set([]);
 	var types = new Set([]);
+	console.log(data[-1])
 	if(typeof(data[0]) === 'undefined') {
 		return null;
 	} else {
 		$.each(data, function( index, row ) {
 			if (row.title == "") {
 				return; // skip empty row
+			}
+			if (row.title == undefined) {
+				return;
 			}
 
 		  	html_list += `<tr>
@@ -88,7 +94,7 @@ function generateHtmlTable(data) {
 		  	</div></td>
 		  	<td class="type"><a>${row.type}</a></td>
 		  	<td class="city"><a>${row.city}, ${row.postcode}</a></td>
-		  	<td class="date"><a>${row.date}</a></td>
+		  	<td class="date"><a>${row.start_date}</a></td>
 		  	</tr>'`;
 
 	  		cities.add(row.city);

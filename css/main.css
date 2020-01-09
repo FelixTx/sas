@@ -1633,6 +1633,7 @@
 
 	h2 {
 		font-size: 2em;
+		line-height: 1.2em;
 	}
 
 	h3 {
@@ -1758,8 +1759,8 @@
 		border: 0;
 		cursor: pointer;
 		display: inline-block;
-		line-height: 4.25em;
-		padding: 0 1.2em;
+		line-height: 2.8em;
+		padding: 0.8em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
