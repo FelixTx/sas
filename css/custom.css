@@ -79,18 +79,23 @@ p.ind {
 #banner div {
 	margin:auto;
 	width: 60%;
-	max-width: 1200px;
+	max-width: 1000px;
+	max-height: 80vh;
 	background:white;
 	padding: 3em;
 }
 
+@media screen and (min-width: 980px) {
+
 #banner div img {
+	max-height: 45vh;
 	margin-bottom: 2em;
 }
+}
 
-#banner h1 {
-	font-size: 3vw;
+#banner h3 {
 	margin:0 0 0.5em 0;
+	text-transform: uppercase;
 }
 .container{
 max-width: 90%;
@@ -308,9 +313,6 @@ tr p {
 		float: none;
 	}
 }
-	#banner h4 {
-		font-size: 2vw;
-	}
 
 @media screen and (max-width: 980px) {
 	.wrapper:first-of-type {
@@ -320,16 +322,19 @@ tr p {
 	h1 {
 		font-size: 2.5em;
 	}
+
+	h3 {
+		font-size: 1em;
+	}
+	
 	#banner div {
 		margin:auto;
 		width: 70%;
-		max-width: 1200px;
 		background:white;
 		padding: 2em;
 	}
 
-	#banner h4 {
-		font-size: 1em;
+	#banner h5 {
 		max-width: 21em;
 		position: absolute;
 		top: 1.5em; 
@@ -387,7 +392,7 @@ tr p {
 		float: right;
 	}
 
-	#banner h1 {
+	#banner h3 {
 		margin:0;
 		text-transform:none;
 		color: #324b4b;

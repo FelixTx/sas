@@ -1618,7 +1618,7 @@
 		margin: 0 0 2em 0;
 	}
 
-	h1, h2, h3, h5, h6 {
+	h1, h2, h3, h6 {
 		font-weight: 500;
 		line-height: 1em;
 		margin: 1em 0 1em 0;
@@ -1646,7 +1646,8 @@
 	}
 
 	h5 {
-		font-size: 0.9em;
+		font-size: 1.2em;
+		line-height: 1.2em;
 	}
 
 	h6 {
