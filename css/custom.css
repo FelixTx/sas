@@ -571,3 +571,12 @@ table td.date {
 	padding-left: 0;
 	padding-right: 0;
 }
+
+.partners p {
+	margin-bottom: 0;
+}
+
+
+#footer .social li a:hover {
+	opacity: 0.8;
+}
