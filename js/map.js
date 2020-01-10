@@ -73,7 +73,6 @@ function generateHtmlTable(data) {
 	var html_list = '';
 	var cities = new Set([]);
 	var types = new Set([]);
-	console.log(data[-1])
 	if(typeof(data[0]) === 'undefined') {
 		return null;
 	} else {
