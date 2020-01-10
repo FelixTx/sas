@@ -150,39 +150,33 @@ map.addControl(new mapboxgl.GeolocateControl({
 
 map.addControl(new mapboxgl.FullscreenControl());
 
+// map.on("load", function () {
+// 	loadmap(markers);
+// })
+
 function loadmap(markers) {
 
-	map.on("load", function () {
+	const images =[
+	{url: 'https://felixtx.github.io/sas/images/marker-Atelier.png', id: 'Atelier'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Autre.png', id: 'Autre'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Débat.png', id: 'Débat'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Exposition.png', id: 'Exposition'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Projection.png', id: 'Projection'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Rencontre.png', id: 'Rencontre'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Repas.png', id: 'Repas'}
+	]
+	var filterGroup = document.getElementById('filter-group');
 
-		const images =[
-		  {url: 'https://felixtx.github.io/sas/images/marker-Atelier.png', id: 'Atelier'},
-		  {url: 'https://felixtx.github.io/sas/images/marker-Autre.png', id: 'Autre'},
-		  {url: 'https://felixtx.github.io/sas/images/marker-Débat.png', id: 'Débat'},
-		  {url: 'https://felixtx.github.io/sas/images/marker-Exposition.png', id: 'Exposition'},
-		  {url: 'https://felixtx.github.io/sas/images/marker-Projection.png', id: 'Projection'},
-		  {url: 'https://felixtx.github.io/sas/images/marker-Rencontre.png', id: 'Rencontre'},
-		  {url: 'https://felixtx.github.io/sas/images/marker-Repas.png', id: 'Repas'}
-		]
-		var filterGroup = document.getElementById('filter-group');
-
-        Promise.all(
-            images.map(img => new Promise((resolve, reject) => {
-                map.loadImage(img.url, function (error, res) {
-                    map.addImage(img.id, res);
-/*                  var node = document.createElement("li");
-					var label = document.createElement('a');
-					var icon = document.createElement('img');
-					icon.setAttribute('src', img.url);
-					label.textContent = img.id;
-					node.appendChild(icon);
-					node.appendChild(label);
-					filterGroup.appendChild(node);*/
-                    resolve();
-                })
-            }))
-        )
-        .then(
-
+	Promise.all(
+		images.map(img => new Promise((resolve, reject) => {
+			map.loadImage(img.url, function (error, res) {
+				map.addImage(img.id, res);
+				resolve();
+			})
+		}))
+		)
+	.then(
+		map.on("load", function () {
 			/* Style layer: A style layer ties together the source and image and specifies how they are displayed on the map. */
 			map.addLayer({
 				id: "events",
@@ -198,10 +192,10 @@ function loadmap(markers) {
 					"icon-size": .7
 				},
 			//	"filter": ["==", "type", category]
-			})
+		})
 
 			// map.setFilter('events', ["in", "type", "Repas","Atelier"]);
-
+		})
 		);
 
 		// When a click event occurs on a feature in the places layer, open a popup at the
@@ -250,5 +244,9 @@ function loadmap(markers) {
 	map.on('mouseleave', 'events', function () {
 		map.getCanvas().style.cursor = '';
 	});
-})
 }
+
+map.on('styleimagemissing', function(e) {
+	map.removeLayer("events");
+	loadmap(markers);
+});
