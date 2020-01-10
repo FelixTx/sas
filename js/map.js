@@ -84,12 +84,15 @@ function generateHtmlTable(data) {
 			if (row.title == undefined) {
 				return;
 			}
+			if (row.end_date) {date_string = "du " + row.start_date + " au " + row.end_date} else { date_string = "le " + row.start_date };
+			if (row.end_time) {time_string = "de " + row.start_time + " à " + row.end_time} else { time_string = "à " + row.start_time };
 
 		  	html_list += `<tr>
 		  	<td class="description"><div>
 		  	<h3>${row.title}</h3>
 		  	<a class="list">type: ${row.type}</a>
-		  	<a class="list">${row.start_date}  -  ${row.city}, ${row.postcode}</a>
+		  	<a class="list">${date_string} - ${time_string}</a>
+		  	<a class="list">${row.city}, ${row.postcode}</a>
 		  	<p>${row.description}</p>
 		  	</div></td>
 		  	<td class="type"><a>${row.type}</a></td>
@@ -226,8 +229,9 @@ function loadmap(markers) {
 	if (end_time) {time_string = "de " + start_time + " à " + end_time} else { time_string = "à " + start_time };
 	popup_content = `
 	<h4>${evt_title}</h4>
-	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;"><b>${evt_type}</b> - </a><i>${date_string} - ${time_string}</i>
-	<br><a>lieu: ${evt_place}</a>
+	<br><a><b>${evt_type}</b></a>
+	<br><i>${date_string} - ${time_string}</i>
+	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;">${evt_place}</a>
 	<br><a>organisé par <i>${evt_organizer}</i></a>
 	<p><br>${evt_description}</p>
 	`

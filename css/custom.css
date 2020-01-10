@@ -170,7 +170,7 @@ th select, th p{
 }
 
 th select {
-	margin: 0.3em 0;
+	margin: 0 1em 0 0;
 	border: none;
 	border-radius: 0;
 	width: auto;
@@ -448,15 +448,19 @@ tr p {
 }
 
 #manifeste .rotate2 {
-	font-size: 1.5em;
-	color: white;
 	background-color: #e74632;
 	padding: 1.2em 0.5em;
 	margin: 0 0.2em;
 	transform: rotate(-10deg);
-	border-radius: 90px / 58px;
-	-webkit-border-radius: 90px / 58px;
-	-moz-border-radius: 90px / 58px;
+	border-radius: 90px / 50px;
+	-webkit-border-radius: 90px / 50px;
+	-moz-border-radius: 90px / 50px;
+}
+
+#manifeste .rotate2 a {
+font-size: 1.5em;
+color: white;
+cursor: pointer;
 }
 
 #acteurs h3 {
@@ -558,4 +562,8 @@ iframe .exportHeader {
 	.book {
 		width: 20em;
 	}
+}
+
+#manifeste a.link:hover {
+	opacity: 0.8;
 }
