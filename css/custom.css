@@ -249,19 +249,12 @@ tr p {
 	}
 }
 
-.acteurs p, .social p {
-	margin-bottom: 1em;
-}
-
-.partners p {
-	margin-bottom: 0;
-}
-
 #footer p {
+	margin: 1em 0;
 	font-family: Source serif pro, Times, Georgia, Serif;
 }
 
-.footer-right a, .footer-right p, .legal a {
+.footer-right a, .footer-right p, .legal a, .social a {
 	color: white;
 	font-size: 0.8em;
 }
@@ -288,7 +281,7 @@ tr p {
 	transform: rotate(-10deg);
 	font-size: 1em;
 	padding: 1.2em 1.5em;
-	margin: 1em;
+	margin: 1em 3em 1em 0;
 	background:white;
 	border-radius: 4em / 2em;
 	-webkit-border-radius: 4em / 2em;
@@ -296,28 +289,22 @@ tr p {
 }
 
 .footer-left {
-	width:33%;
+	width:30%;
 }
-.footer-right {
-	width:66%;
+
+.footer-right div img {
+	margin-top: 1em;
 }
 
 @media screen and (min-width: 720px) {
 	.footer-right div {
-		margin: 3em 3em 0 0;
-	}
-}
-
-@media screen and (max-width: 720px) {
-	.footer-right div {
-		width: 100%;
+		margin: 1em 3em 0 0;
 	}
 }
 
 .social ul {
 	list-style: none;
 	font-size:1.2em;
-	line-height:1.2em;
 }
 
 .presse a, .participant a {	
@@ -343,9 +330,6 @@ tr p {
 	.footer-left, .footer-right {
 		width: 100%;
 		text-align: center;
-	}
-	.footer-right div {
-		float: none;
 	}
 }
 
@@ -435,7 +419,7 @@ tr p {
 		width:80%;
 	}
 
-	.footer-left {
+	.presse {
 		display: none !important;
 	}
 
