@@ -191,16 +191,12 @@ th select:hover {
 	cursor: pointer; 
 }
 
-#city-filter {
-	margin-left: 1em;
-}
-
 select, option {
 -webkit-appearance:none;
 -moz-appearance: none;
 }
 
-#event-list a.list {
+#event-list a.list-s {
 	display: none;
 }
 
@@ -334,6 +330,9 @@ tr p {
 }
 
 @media screen and (max-width: 980px) {
+	#city-filter {
+	margin-left: 1em;
+	}
 	.wrapper:first-of-type {
 		margin-top: 3em;
 	}
@@ -371,11 +370,11 @@ tr p {
 		padding:0;
 	}
 
-	#event-list tr a, thead .date, thead .name {
+	#event-list tr a.list-l, thead .date, thead .name {
 		display: none;
 	}
 
-	#event-list tr a.list {
+	#event-list tr a.list-s {
 		display: block;
 	}
 

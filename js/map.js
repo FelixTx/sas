@@ -83,21 +83,21 @@ function generateHtmlTable(data) {
 			if (row.title == undefined) {
 				return;
 			}
-			if (row.end_date) {date_string = row.start_date + " - " + row.end_date} else { date_string = row.start_date };
+			if (row.end_date) {date_string = row.start_date + " > " + row.end_date} else { date_string = row.start_date };
 			if (row.end_time) {time_string = row.start_time + " - " + row.end_time} else { time_string = row.start_time };
 
 		  	html_list += `<tr>
 		  	<td class="description"><div>
 		  	<h3><a href="${row.facebook}" title="événement Facebook">${row.title}</a></h3>
 		  	<h4>${row.location_name}</h4>
-		  	<a class="list">type: ${row.type}</a>
-		  	<a class="list">${date_string} <br> ${time_string}</a>
-		  	<a class="list">${row.city}, ${row.postcode}</a>
+		  	<a class="list-s">type: ${row.type}</a>
+		  	<a class="list-s">${date_string} <br> ${time_string}</a>
+		  	<a class="list-s">${row.city}, ${row.postcode}</a>
 		  	<p>${row.description}</p>
 		  	</div></td>
-		  	<td class="type"><a>${row.type}</a></td>
-		  	<td class="city"><a>${row.city}, ${row.postcode}</a></td>
-		  	<td class="date"><a>${date_string} ${time_string}</a></td>
+		  	<td class="type"><a class="list-l">${row.type}</a></td>
+		  	<td class="city"><a class="list-l">${row.city}, ${row.postcode}</a></td>
+		  	<td class="date"><a class="list-l">${date_string} ${time_string}</a></td>
 		  	</tr>'`;
 
 	  		cities.add(row.city);
