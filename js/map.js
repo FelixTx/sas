@@ -9,7 +9,7 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		//url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
+		//url: "http://sortonslagriculturedusalon.fr/events.tsv?" + Math.random(),
 		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
 		dataType: "text",    
 		success: function(response)  
@@ -157,13 +157,13 @@ map.addControl(new mapboxgl.FullscreenControl());
 function loadmap(markers) {
 
 	const images =[
-	{url: 'https://felixtx.github.io/sas/images/marker-Atelier.png', id: 'Atelier'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Autre.png', id: 'Autre'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Conférence.png', id: 'Conférence'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Exposition.png', id: 'Exposition'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Projection.png', id: 'Projection'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Rencontre.png', id: 'Rencontre'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Repas.png', id: 'Repas'}
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Atelier.png', id: 'Atelier'},
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Autre.png', id: 'Autre'},
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Conférence.png', id: 'Conférence'},
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Exposition.png', id: 'Exposition'},
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Projection.png', id: 'Projection'},
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Rencontre.png', id: 'Rencontre'},
+	{url: 'http://sortonslagriculturedusalon.fr/images/marker-Repas.png', id: 'Repas'}
 	]
 	var filterGroup = document.getElementById('filter-group');
 
@@ -226,7 +226,7 @@ function loadmap(markers) {
 	<h4><a href="${facebook}" title="événement Facebook">${title}</a></h4>
 	<br><a><b>${type}</b></a>
 	<br><i>${date_string} ${time_string}</i>
-	<br><a><img src="https://felixtx.github.io/sas/images/marker-${type}.png" height="15px;">${place}</a>
+	<br><a><img src="http://sortonslagriculturedusalon.fr/images/marker-${type}.png" height="15px;">${place}</a>
 	<br><a>organisé par <i>${organizer}</i></a>
 	<p><br>${description}</p>
 	`
@@ -247,7 +247,7 @@ function loadmap(markers) {
 	});
 }
 
-map.on('styleimagemissing', function(e) {
+map.once('styleimagemissing', function(e) {
 	map.removeLayer("events");
 	loadmap(markers);
 });
