@@ -158,7 +158,7 @@ function loadmap(markers) {
 	const images =[
 	{url: 'https://felixtx.github.io/sas/images/marker-Atelier.png', id: 'Atelier'},
 	{url: 'https://felixtx.github.io/sas/images/marker-Autre.png', id: 'Autre'},
-	{url: 'https://felixtx.github.io/sas/images/marker-Débat.png', id: 'Débat'},
+	{url: 'https://felixtx.github.io/sas/images/marker-Conférence.png', id: 'Conférence'},
 	{url: 'https://felixtx.github.io/sas/images/marker-Exposition.png', id: 'Exposition'},
 	{url: 'https://felixtx.github.io/sas/images/marker-Projection.png', id: 'Projection'},
 	{url: 'https://felixtx.github.io/sas/images/marker-Rencontre.png', id: 'Rencontre'},
