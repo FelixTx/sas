@@ -248,11 +248,19 @@ tr p {
 	}
 }
 
+.acteurs p, .social p {
+	margin-bottom: 1em;
+}
+
+.partners p {
+	margin-bottom: 0;
+}
+
 #footer p {
 	font-family: Source serif pro, Times, Georgia, Serif;
 }
 
-#footer ul a, .legal a, .acteurs p, .partners p {
+.footer-right a, .footer-right p, .legal a {
 	color: white;
 	font-size: 0.8em;
 }
@@ -293,13 +301,8 @@ tr p {
 	width:66%;
 }
 
-.social {
-	margin-top: 2.7em !important;
-}
-
 @media screen and (min-width: 720px) {
 	.footer-right div {
-		float: right;
 		margin: 3em 3em 0 0;
 	}
 }
