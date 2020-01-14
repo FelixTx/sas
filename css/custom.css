@@ -79,16 +79,14 @@ p.ind {
 #banner div {
 	margin:auto;
 	width: 60%;
-	max-width: 1000px;
-	max-height: 80vh;
+	max-width: 850px;
 	background:white;
-	padding: 3em;
+	padding: 2em;
 }
 
 @media screen and (min-width: 980px) {
 
 #banner div img {
-	max-height: 45vh;
 	margin-bottom: 2em;
 }
 }
@@ -364,8 +362,6 @@ tr p {
 	#banner div {
 		margin:auto;
 		width: 70%;
-		background:white;
-		padding: 2em;
 	}
 
 	#banner h5 {
