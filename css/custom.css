@@ -161,7 +161,6 @@ th select, th p{
 	text-transform: uppercase;
 	color: white;
 	display: inline;
-	padding: 3px 5px;
 	text-align: center;
 	height: 2em;
 	vertical-align: middle;
@@ -169,14 +168,38 @@ th select, th p{
 	line-height: 1em;
 }
 
+th p{
+	padding: 5px;
+}
+
 th select {
-	margin: 0 1em 0 0;
+	padding: 3px 5px;
+}
+
+.triangle {
+	color: white;
+	margin-left: -42px;
+}
+
+th select {
+	margin-right: 1em;
 	border: none;
 	border-radius: 0;
 	width: auto;
+	padding-right: 1em;
 }
+
 th select:hover {
 	cursor: pointer; 
+}
+
+#city-filter {
+	margin-left: 1em;
+}
+
+select, option {
+-webkit-appearance:none;
+-moz-appearance: none;
 }
 
 #event-list a.list {
