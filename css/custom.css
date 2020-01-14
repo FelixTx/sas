@@ -501,6 +501,7 @@ cursor: pointer;
 .book {
 	width: 48%;
 	display: inline-block;
+	vertical-align: top;
 }
 
 .book .details {
@@ -512,10 +513,13 @@ cursor: pointer;
 
 .details p {
 	margin-top: 0.5em;
+	font-size: 0.8em;
+	line-height:1em;
 }
 
 .details h4 {
 	font-size: 1em;
+	white-space: nowrap;
 }
 
 .cover {

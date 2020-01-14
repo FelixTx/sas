@@ -89,7 +89,7 @@ function generateHtmlTable(data) {
 		  	html_list += `<tr>
 		  	<td class="description"><div>
 		  	<h3><a href="${row.facebook}" title="événement Facebook">${row.title}</a></h3>
-		  	<h4>${row.place_name}</h4>
+		  	<h4>${row.location_name}</h4>
 		  	<a class="list">type: ${row.type}</a>
 		  	<a class="list">${date_string} <br> ${time_string}</a>
 		  	<a class="list">${row.city}, ${row.postcode}</a>
@@ -225,7 +225,7 @@ function loadmap(markers) {
 	popup_content = `
 	<h4><a href="${facebook}" title="événement Facebook">${title}</a></h4>
 	<br><a><b>${type}</b></a>
-	<br><i>${date_string} ${time_string}</i>
+	<br><i>${date_string} // ${time_string}</i>
 	<br><a><img src="http://sortonslagriculturedusalon.fr/images/marker-${type}.png" height="15px;">${place}</a>
 	<br><a>organisé par <i>${organizer}</i></a>
 	<p><br>${description}</p>
