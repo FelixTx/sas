@@ -208,6 +208,10 @@ tr h3 {
 	margin-bottom:0;
 }
 
+tr h4 {
+	font-size: 0.8em;
+}
+
 tr p {
 	overflow: hidden;
 	margin-top: 0.5em;

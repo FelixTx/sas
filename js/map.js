@@ -9,8 +9,8 @@ var markers = {
 
 	$.ajax({
 		type: "GET",  
-		url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
-		//url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
+		//url: "https://felixtx.github.io/sas/events.tsv?" + Math.random(),
+		url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSQm5xowwY1yJ2p5Ejuk9bfKXHs3OnGwK9WD7P7CO7Zw3YYznDfWuTFw-BTlVzgq0awtN3_jNV_Vl60/pub?gid=0&single=true&output=tsv",
 		dataType: "text",    
 		success: function(response)  
 		{
@@ -37,7 +37,7 @@ var markers = {
 
 
 	function CSV2JSON(csv) {
-		var lines = csv.split("\n");
+		var lines = csv.split("\r");
 		var titles = lines[0].split('\t');
 		var data = new Array(lines.length - 1);
 
@@ -83,14 +83,15 @@ function generateHtmlTable(data) {
 			if (row.title == undefined) {
 				return;
 			}
-			if (row.end_date) {date_string = "du " + row.start_date + " au " + row.end_date} else { date_string = "le " + row.start_date };
-			if (row.end_time) {time_string = "de " + row.start_time + " à " + row.end_time} else { time_string = "à " + row.start_time };
+			if (row.end_date) {date_string = row.start_date + " - " + row.end_date} else { date_string = row.start_date };
+			if (row.end_time) {time_string = row.start_time + " - " + row.end_time} else { time_string = row.start_time };
 
 		  	html_list += `<tr>
 		  	<td class="description"><div>
-		  	<h3><a href="${row.facebook}">${row.title}</a></h3>
+		  	<h3><a href="${row.facebook}" title="événement Facebook">${row.title}</a></h3>
+		  	<h4>${row.place_name}</h4>
 		  	<a class="list">type: ${row.type}</a>
-		  	<a class="list">${date_string} ${time_string}</a>
+		  	<a class="list">${date_string} <br> ${time_string}</a>
 		  	<a class="list">${row.city}, ${row.postcode}</a>
 		  	<p>${row.description}</p>
 		  	</div></td>
@@ -219,10 +220,10 @@ function loadmap(markers) {
 	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
-	if (end_date) {date_string = "du " + start_date + " au " + end_date} else { date_string = "le " + start_date };
-	if (end_time) {time_string = "de " + start_time + " à " + end_time} else { time_string = "à " + start_time };
+	if (end_date) {date_string = start_date + " - " + end_date} else { date_string = start_date };
+	if (end_time) {time_string = start_time + " - " + end_time} else { time_string = start_time };
 	popup_content = `
-	<h4><a href="${facebook}">${title}</a></h4>
+	<h4><a href="${facebook}" title="événement Facebook">${title}</a></h4>
 	<br><a><b>${type}</b></a>
 	<br><i>${date_string} ${time_string}</i>
 	<br><a><img src="https://felixtx.github.io/sas/images/marker-${type}.png" height="15px;">${place}</a>
