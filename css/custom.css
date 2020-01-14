@@ -196,15 +196,17 @@ select, option {
 -moz-appearance: none;
 }
 
-#event-list a.list-s {
-	display: none;
+@media screen and (min-width: 980px) {
+	#event-list a.list-s {
+		display: none;
+	}
 }
 
 tr h3 {
 	margin-bottom:0;
 }
 
-tr h4, .list-s {
+tr .list-s {
 	font-size: 0.8em;
 }
 
@@ -372,10 +374,6 @@ tr p {
 
 	#event-list tr a.list-l, thead .date, thead .name {
 		display: none;
-	}
-
-	#event-list tr a.list-s {
-		display: block;
 	}
 
 	#banner {

@@ -89,7 +89,7 @@ function generateHtmlTable(data) {
 		  	html_list += `<tr>
 		  	<td class="description"><div>
 		  	<h3><a href="${row.facebook}" title="événement Facebook">${row.title}</a></h3>
-		  	<h4>${row.location_name} <a class="list-s">${row.city}, ${row.postcode}</a></h4>
+		  	<h4><a>${row.location_name}</a><a class="list-s">${row.city}, ${row.postcode}</a></h4>
 		  	<a class="list-s">type: ${row.type}</a>
 		  	<a class="list-s">${date_string} <br> ${time_string}</a>
 		  	<p>${row.description}</p>
