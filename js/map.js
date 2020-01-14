@@ -88,7 +88,7 @@ function generateHtmlTable(data) {
 
 		  	html_list += `<tr>
 		  	<td class="description"><div>
-		  	<h3>${row.title}</h3>
+		  	<h3><a href="${row.facebook}">${row.title}</a></h3>
 		  	<a class="list">type: ${row.type}</a>
 		  	<a class="list">${date_string} ${time_string}</a>
 		  	<a class="list">${row.city}, ${row.postcode}</a>
@@ -201,16 +201,17 @@ function loadmap(markers) {
 	// location of the feature, with description HTML from its properties.
 	map.on('click', 'events', function (e) {
 		var coordinates = e.features[0].geometry.coordinates.slice();
-		var evt_description = e.features[0].properties.description;
-		var evt_title = e.features[0].properties.title;
-		var evt_type = e.features[0].properties.type;
-		var evt_place = e.features[0].properties.location_name;
+		var description = e.features[0].properties.description;
+		var title = e.features[0].properties.title;
+		var type = e.features[0].properties.type;
+		var place = e.features[0].properties.location_name;
+		var address = e.features[0].properties.address;
 		var start_date = e.features[0].properties.start_date;
 		var end_date = e.features[0].properties.end_date;
 		var start_time = e.features[0].properties.start_time;
 		var end_time = e.features[0].properties.end_time;
-		var evt_organizer = e.features[0].properties.organizer;
-
+		var organizer = e.features[0].properties.organizer;
+		var facebook = e.features[0].properties.facebook;
 
 	// Ensure that if the map is zoomed out such that multiple
 	// copies of the feature are visible, the popup appears
@@ -221,12 +222,12 @@ function loadmap(markers) {
 	if (end_date) {date_string = "du " + start_date + " au " + end_date} else { date_string = "le " + start_date };
 	if (end_time) {time_string = "de " + start_time + " à " + end_time} else { time_string = "à " + start_time };
 	popup_content = `
-	<h4>${evt_title}</h4>
-	<br><a><b>${evt_type}</b></a>
+	<h4><a href="${facebook}">${title}</a></h4>
+	<br><a><b>${type}</b></a>
 	<br><i>${date_string} ${time_string}</i>
-	<br><a><img src="https://felixtx.github.io/sas/images/marker-${evt_type}.png" height="15px;">${evt_place}</a>
-	<br><a>organisé par <i>${evt_organizer}</i></a>
-	<p><br>${evt_description}</p>
+	<br><a><img src="https://felixtx.github.io/sas/images/marker-${type}.png" height="15px;">${place}</a>
+	<br><a>organisé par <i>${organizer}</i></a>
+	<p><br>${description}</p>
 	`
 	new mapboxgl.Popup()
 	.setLngLat(coordinates)
