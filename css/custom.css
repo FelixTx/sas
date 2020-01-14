@@ -589,3 +589,7 @@ table td.date {
 #footer .social li a:hover {
 	opacity: 0.8;
 }
+
+.orga-button {
+	margin-bottom: 3em;
+}
