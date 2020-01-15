@@ -79,16 +79,22 @@ p.ind {
 #banner div {
 	margin:auto;
 	width: 60%;
-	max-width: 850px;
 	background:white;
 	padding: 2em;
 }
 
+#banner div img {
+max-width: 800px;
+}
+
 @media screen and (min-width: 980px) {
 
-#banner div img {
-	margin-bottom: 2em;
-}
+	#banner div img {
+		margin-bottom: 2em;
+	}
+	#banner div {
+		max-width: 850px;
+	}
 }
 
 #banner h3 {
