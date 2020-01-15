@@ -87,7 +87,7 @@ function generateHtmlTable(data) {
             }
             if (row.end_date) {date_string = row.start_date + " > " + row.end_date} else { date_string = row.start_date };
             if (row.end_time) {time_string = row.start_time + " - " + row.end_time} else { time_string = row.start_time };
-            if (row.facebook) {fb_link = 'href="' + ${row.facebook} +'"'} else {fb_link=''};
+            if (row.facebook) {fb_link = 'href="' + row.facebook +'"'} else {fb_link=''};
             html_list += `<tr>
             <td class="description"><div>
             <h3><a ${fb_link} title="événement Facebook">${row.title}</a></h3>
@@ -107,11 +107,11 @@ function generateHtmlTable(data) {
         $('#event-list').find('tbody').append(html_list);
     }
     types.forEach(t => {
-        if (${t} == "") {return;}
+        if (t == "") {return;}
         $('#type-filter').append(`<option value="${t}">${t}</option>`);
     });
     cities.forEach(c => {
-        if (${c} == "") {return;}
+        if (c == "") {return;}
         $('#city-filter').append(`<option value="${c}">${c}</option>`);
     });
 }   
