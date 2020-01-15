@@ -85,13 +85,11 @@ p.ind {
 
 #banner div img {
 max-width: 800px;
+margin-bottom: 0.5em;
 }
 
 @media screen and (min-width: 980px) {
 
-	#banner div img {
-		margin-bottom: 2em;
-	}
 	#banner div {
 		max-width: 850px;
 	}
@@ -397,7 +395,6 @@ tr p {
 	#banner div img {
 		margin-top: -60vw;
 		padding-top: 5em;
-		margin-bottom: 0;
 	}
 
 	h2 {
