@@ -87,10 +87,10 @@ function generateHtmlTable(data) {
             }
             if (row.end_date) {date_string = row.start_date + " > " + row.end_date} else { date_string = row.start_date };
             if (row.end_time) {time_string = row.start_time + " - " + row.end_time} else { time_string = row.start_time };
-
+            if (row.facebook) {fb_link = 'href="' + ${row.facebook} +'"'} else {fb_link=''}
             html_list += `<tr>
             <td class="description"><div>
-            <h3><a href="${row.facebook}" title="événement Facebook">${row.title}</a></h3>
+            <h3><a ${fb_link} title="événement Facebook">${row.title}</a></h3>
             <h4><a>${row.location_name}</a><a class="list-s">, ${row.city}, ${row.postcode}</a></h4>
             <a class="list-s">type: ${row.type}</a><br>
             <a class="list-s">${date_string} // ${time_string}</a>
