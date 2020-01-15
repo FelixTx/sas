@@ -606,3 +606,7 @@ table td.date {
 table th {
 	min-width: 7em;
 }
+
+.description p {
+	margin-bottom: 1em;
+}
