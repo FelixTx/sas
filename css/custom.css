@@ -218,8 +218,6 @@ tr p {
 }
 
 .description {
-	min-width: 40%;	
-	max-height:300px;
 	overflow: hidden;
 	padding-left:0;
 }
@@ -598,4 +596,8 @@ table td.date {
 
 .orga-button {
 	margin-bottom: 3em;
+}
+
+table th {
+	min-width: 7em;
 }
