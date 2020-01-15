@@ -266,7 +266,8 @@ tr p {
 
 .partners img, .partners a {
 	margin-top: 0.5em;
-	height: 3em;
+	max-height: 3em;
+	max-width: 9em;
 }
 
 #footer .container div {
