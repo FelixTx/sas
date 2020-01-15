@@ -47,6 +47,8 @@ var markers = {
             for (var j = 0; j < titles.length; j++) {
                 if (lines[i][j]) {
                     data[i - 1][titles[j]] = lines[i][j].trim();                    
+                } else {
+                    data[i - 1][titles[j]] = ""
                 }
             }
         }
@@ -104,10 +106,12 @@ function generateHtmlTable(data) {
         });
         $('#event-list').find('tbody').append(html_list);
     }
-    types.forEach(t => {        
+    types.forEach(t => {
+        if (${t} == "") {return;}
         $('#type-filter').append(`<option value="${t}">${t}</option>`);
     });
     cities.forEach(c => {
+        if (${c} == "") {return;}
         $('#city-filter').append(`<option value="${c}">${c}</option>`);
     });
 }   
