@@ -362,6 +362,7 @@ tr p {
 	}
 
 	#banner h5 {
+		font-size: 1em;
 		max-width: 21em;
 		width: calc(100% - 6em);
 		position: absolute;
