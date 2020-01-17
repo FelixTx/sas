@@ -2782,8 +2782,8 @@
 
 			#navPanel .close:before {
 				content: url(../images/close.svg);
-				width: 2em;
-				height: 2em;
+				width: 1.5em;
+				height: 1.5em;
 				line-height: 1em;
 				display: block;
 				position: absolute;
