@@ -441,11 +441,7 @@ tr p {
 	}
 
 	.footer-right div {
-		padding: 0;
-	}
-
-	.footer-right div img {
-		max-height: 2em;
+		padding: 0 0.5em;
 	}
 }
 
@@ -624,4 +620,8 @@ table th {
 
 .description p {
 	margin-bottom: 1em;
+}
+
+#footer li, #footer p {
+	text-align: left;
 }
