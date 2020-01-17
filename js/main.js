@@ -62,6 +62,8 @@
 						side: 'right'
 					});
 
+				$("#navPanel .logo-milieu img").attr("src", "images/sas-logo-white.svg");
+
 			// Fix: Remove transitions on WP<10 (poor/buggy performance).
 				if (skel.vars.os == 'wp' && skel.vars.osVersion < 10)
 					$('#navPanel')

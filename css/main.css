@@ -1620,7 +1620,7 @@
 
 	h1, h2, h3, h6 {
 		font-weight: 500;
-		line-height: 1em;
+		line-height: 1.2em;
 		margin: 1em 0 1em 0;
 	}
 	h1 {
@@ -1633,12 +1633,10 @@
 
 	h2 {
 		font-size: 2em;
-		line-height: 1.2em;
 	}
 
 	h3 {
 		font-size: 1.8em;
-		line-height:1.2em;
 	}
 
 	h4 {
